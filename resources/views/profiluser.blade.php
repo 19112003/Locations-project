@@ -82,7 +82,7 @@
                               </a>
                            </li>
                            <li>
-                              <a href="/createParking">
+                              <a href="/Parkings">
                                  <div class="menu-name">Parkings</div>
                               </a>
                            </li>

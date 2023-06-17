@@ -69,7 +69,7 @@ class VehiculeController extends Controller
             $image = $request->file('image');
             foreach ($image as $images) {
                 $filename = $images->getClientOriginalName();
-                $path = $images->store('images');
+                $path = $images->storeAs('public/images/',$filename);
             }
             
         }

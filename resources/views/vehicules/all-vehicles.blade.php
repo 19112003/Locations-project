@@ -14,12 +14,12 @@
                   <div class="small-breadcrumb">
                      <div class=" breadcrumb-link">
                         <ul>
-                           <li><a href="index.html">Home Page</a></li>
-                           <li><a class="active" href="#">Listing</a></li>
+                           <li><a href="/home">Page d'acceuil</a></li>
+                           <li><a class="active" href="#">Nos véhicules</a></li>
                         </ul>
                      </div>
                      <div class="header-page">
-                        <h1>Grid Listing - (2)</h1>
+                        <h1>Notre sélection de véhicules</h1>
                      </div>
                   </div>
                </div>
@@ -107,9 +107,9 @@
                                        <!-- Addition Info -->
                                        <div class="ad-info">
                                           <ul>
-                                             <li><i class="flaticon-fuel-1"></i>{{$vehicule -> energie }}</li>
-                                             <li><i class="flaticon-dashboard"></i>{{$vehicule -> kilometrage }}</li>
-                                             <li><i class="flaticon-engine-2"></i> {{$vehicule -> boite_vitesse }}</li>
+                                             <li><i class="fas fa-gas-pump"></i>{{$vehicule -> energie }}</li>
+                                             <li><i class="fas fa-tachometer-alt"></i>{{$vehicule -> kilometrage }}</li>
+                                             <li><i class="fas fa-engine"></i> {{$vehicule -> boite_vitesse }}</li>
                                           </ul>
                                        </div>
                                     </div>
