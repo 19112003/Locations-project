@@ -39,8 +39,8 @@
                   <div class="col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
                      <!--  Form -->
                      <div class="form-grid">
-                        <form>
-                        
+                        <form method="POST" action="{{ route('login') }}">
+                           @csrf
                           <!-- <a class="btn btn-lg btn-block btn-social btn-facebook">
             					<span class="fa fa-facebook"></span> Sign in with Facebook
           				  </a>
@@ -52,12 +52,15 @@
                           <h2 class="no-span"><b>(OR)</b></h2> -->
                         
                            <div class="form-group">
-                              <label>Email</label>
-                              </span><input placeholder="Votre Email" class="form-control" type="email">
+                              <label for="email">Email</label>
+                              <input placeholder="Votre Email" class="form-control" type="email" id="email" name="email"  required autofocus>
                            </div>
+
                            <div class="form-group">
-                              <label>Password</label></span><input placeholder="Votre mot de passe" class="form-control " type="password" required>
-                              <a href="#" style="float:right;font-size:12px;"> Mot de passe oublié? </a>
+                              <label for="password">Password</label></span><input placeholder="Votre mot de passe" class="form-control " type="password" id="password" name="password" required autocomplete="current-password">
+                              @if (Route::has('password.request'))
+                              <a href="{{ route('password.request') }}" style="float:right;font-size:12px;"> Mot de passe oublié? </a>
+                              @endif
                            </div>
                            <div class="form-group">
                               <div class="row">
@@ -73,9 +76,9 @@
                                  </div>
                               </div>
                            </div>
-                           <button class="btn btn-theme btn-lg btn-block">Connexion</button>
+                           <button type="submit" class="btn btn-theme btn-lg btn-block">Connexion</button>
                            <br>
-                           <div class="text-center pt-4 text-muted">Vous n'avez pas de compte? <a href="/register">Inscrivez vous</a> </div>
+                           <div class="text-center pt-4 text-muted">Vous n'avez pas de compte? <a href="#">Inscrivez vous</a> </div>
                         </form>
                      </div>
                      <!-- Form -->

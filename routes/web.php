@@ -21,7 +21,7 @@ use App\Http\Controllers\ParkingController;
 });*/
 
 Route::get('/dashboard', function () {
-    return view('dashboard');
+    return view('index');
 })->middleware(['auth'])->name('dashboard');
 
 require __DIR__.'/auth.php';
@@ -55,13 +55,13 @@ Route::get('/user', function () {
     return view('profiluser');
 });
 
-Route::get('/login', function () {
+/*Route::get('/login', function () {
     return view('connexion');
-});
+});**/
 
-Route::get('/register', function () {
+/*Route::get('/register', function () {
     return view('inscription');
-});
+});*/
 
 Route::get('/contact', function () {
     return view('contact');

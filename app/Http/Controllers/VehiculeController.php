@@ -26,6 +26,20 @@ class VehiculeController extends Controller
         return view('vehicules.all-vehicles', compact('vehicules'));
     }
 
+    //Affichage des véhicules dans la page d'acceuil
+
+    public function home()
+    {
+        $vehicules = Vehicule::all();
+        foreach ($vehicules as $vehicule) {
+            $vehicule->images = VehiculeImage::where('vehicule_id', $vehicule->id)->get();
+        }
+
+
+        // dd($vehicule);
+        return view('index', compact('vehicules'));
+    }
+
     /**
      * Show the form for creating a new resource.
      *

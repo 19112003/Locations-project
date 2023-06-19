@@ -47,7 +47,7 @@
                         <!-- Main Title -->
                         <h1 id="new">Nos Dernières <span class="heading-color"> Nouveautés</span></h1>
                         <!-- Short Description -->
-                        <p class="heading-text">Eu delicata rationibus usu. Vix te putant utroque, ludus fabellas duo eu, his dico ut debet consectetuer.</p>
+                        <p class="heading-text">Découvrez nos nouveaux logements et véhicules</p>
                      </div>
                   </div>
                   <!-- Middle Content Box -->

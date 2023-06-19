@@ -23,6 +23,8 @@
          </div>
       </div>
       <!-- =-=-=-=-=-=-= Breadcrumb End =-=-=-=-=-=-= -->
+      <!-- Validation Errors -->
+      <x-auth-validation-errors class="mb-4" :errors="$errors" />
       <!-- =-=-=-=-=-=-= Main Content Area =-=-=-=-=-=-= -->
       <div class="main-content-area clearfix">
          <!-- =-=-=-=-=-=-= Registration Form =-=-=-=-=-=-= -->
@@ -36,8 +38,10 @@
                   <div class="col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
                      <!--  Form -->
                      <div class="form-grid">
-                        <form>
-                        
+
+                           
+                        <form method="POST" action="{{ route('register') }}">
+                           @csrf
                           <!--<a class="btn btn-lg btn-block btn-social btn-facebook">
             					<span class="fa fa-facebook"></span> Sign up with Facebook
           				  </a>
@@ -47,22 +51,31 @@
           				  </a>
                           
                           <h2 class="no-span"><b>(OR)</b></h2> -->
+
+                          <!-- Name -->
                           <div class="form-group">
-                              <label>Nom</label>
-                              <input placeholder="Entrez votre nom" class="form-control" type="text">
+                              <label for="name">Nom</label>
+                              <input placeholder="Entrez votre nom" class="form-control" type="text" id="name" name="name" required autofocus>
                            </div>
+                           
+                           <!-- Email Address -->
                            <div class="form-group">
-                              <label>Numéro de téléphone</label>
-                              <input placeholder="Entrez votre numéro de téléphone" class="form-control" type="text">
+                              <label for="email">Email</label>
+                              <input placeholder="Entrez votre Email" class="form-control" type="email" name="email" required>
                            </div>
+
+                           <!-- Password -->
                            <div class="form-group">
-                              <label>Email</label>
-                              <input placeholder="Entrez votre Email" class="form-control" type="email">
+                              <label for="password">Mot de passe</label>
+                              <input placeholder="Entrez votre mot de passe" class="form-control" type="password" id="password" name="password" required autocomplete="new-password">
                            </div>
+
+                           <!-- Confirm Password -->
                            <div class="form-group">
-                              <label>Mot de passe</label>
-                              <input placeholder="Entrez votre mot de passe" class="form-control" type="password">
+                              <label for="password_confirmation">Confirmez votre mot de passe</label>
+                              <input placeholder="Confirmez votre mot de passe" class="form-control" type="password" id="password" name="password_confirmation" required>
                            </div>
+
                            <div class="form-group">
                               <div class="row">
                                  <div class="col-xs-12 col-sm-7">
@@ -81,9 +94,9 @@
                                  </div>
                               </div>
                            </div>
-                           <button class="btn btn-theme btn-lg btn-block">Inscription</button>
+                           <button type="submit" class="btn btn-theme btn-lg btn-block">Inscription</button>
                            <br>
-                           <div class="text-center pt-4 text-muted">Vous avez déjà un compte? <a href="/login">Connexion</a> </div>
+                           <div class="text-center pt-4 text-muted">Vous avez déjà un compte? <a href="#">Connexion</a> </div>
                         </form>
                      </div>
                      <!-- Form -->

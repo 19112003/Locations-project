@@ -38,12 +38,17 @@
                         <div class="search-result-item-body">
                            <div class="row">
                               <div class="col-md-5 col-sm-12 col-xs-12">
-                                 <h4 class="search-result-item-heading"><a href="#">Umair</a></h4>
+                                 <h4 class="search-result-item-heading"><a href="#">{{ Auth::user()->name }}</a></h4>
                                  <p class="info">
                                     <span><a href="profile.html"><i class="fa fa-user "></i>Profil </a></span>
                                     <span><a href="javascript:void(0)"><i class="fa fa-edit"></i>Edit Profile </a></span>
                                  </p>
-                                 <p class="description">You last logged in at: 14-01-2017 6:40 AM [ USA time (GMT + 6:00hrs)</p>
+                                 <p class="description">You last logged in at:
+                                    @if(Auth::user()->last_login_at)
+                                       {{ Auth::user()->last_login_at->format('Y-m-d H:i:s') }}
+                                    @else
+                                       Never
+                                    @endif</p>
                                  <span class="label label-warning">Paid Package</span>
                                  <span class="label label-success">Dealer</span>
                                  <a href="/createLodging"><span class="label label-warning">+ Logement</span></a>
