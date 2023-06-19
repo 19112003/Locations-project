@@ -37,6 +37,7 @@
       <div class="main-content-area clearfix">
          <!-- =-=-=-=-=-=-= Featured  Ads =-=-=-=-=-=-= -->
          <section class="custom-padding gray over-hidden">
+         
             <!-- Main Container -->
             <div class="container">
                <!-- Row -->
@@ -49,20 +50,35 @@
                         <!-- Short Description -->
                         <p class="heading-text">Découvrez nos nouveaux logements et véhicules</p>
                      </div>
+                     
                   </div>
                   <!-- Middle Content Box -->
-                  <div class="col-md-12 col-xs-12 col-sm-12">
+                  
+                  
+                  <div class="col-md-12 col-xs-12 col-sm-12">  
+                  
                      <div class="row">
+                        
+                     
                         <div class="featured-slider container owl-carousel owl-theme">
+                        @foreach($vehicules as $vehicule)
                            <div class="item">
+                              
+                           
                               <div class="col-md-12 col-xs-12 col-sm-12">
                                  <!-- Ad Box -->
+                                 
+                                 <div class="carousel-item {{ $loop->first ? 'active' : '' }}">
                                  <div class="white category-grid-box-1 ">
                                     <div class="featured-ribbon">
                                        <span>Featured</span>
                                     </div>
+                                    
                                     <!-- Image Box -->
-                                    <div class="image"> <img alt="Carspot" src="images/posting/logements/1.jpg" class="img-responsive">
+                                    <div class="image"> 
+                                       @foreach($vehicule->images as $image)
+                                       <img alt="{{ $image->image }}" src="{{ Storage::url($image->path) }}" class="img-responsive">
+                                       @endforeach
                                     </div>
                                     <!-- Short Description -->
                                     <div class="short-description-1 ">
@@ -70,313 +86,42 @@
                                        <div class="category-title"> <span><a href="#">Car & Bikes</a></span> </div>
                                        <!-- Ad Title -->
                                        <h3>
-                                          <a title="" href="single-page-listing.html">BMW I8 1.5 Auto 4X4 2dr </a>
+                                          <a title="" href="single-page-listing.html">{{$vehicule->modele }}  </a>
                                        </h3>
                                        <!-- Location -->
                                        <p class="location"><i class="fa fa-map-marker"></i> Model Town Link Road London</p>
                                        <!-- Price -->
-                                       <span class="ad-price">$370</span> 
+                                       <span class="ad-price">{{$vehicule->prix }}</span> 
                                     </div>
                                     <!-- Ad Meta Stats -->
                                     <div class="ad-info-1">
                                        <ul>
-                                          <li><i class="flaticon-fuel-1"></i>Diesel</li>
-                                          <li><i class="flaticon-dashboard"></i>35,000 km</li>
-                                          <li><i class="flaticon-engine-2"></i> 1800 cc</li>
+                                          <li><i class="fas fa-gas-pump"></i>{{$vehicule -> energie }}</li>
+                                          <li><i class="fas fa-tachometer-alt"></i>{{$vehicule -> kilometrage }}</li>
+                                          <li><i class="flaticon-engine-2"></i> {{$vehicule -> boite_vitesse }}</li>
                                        </ul>
                                     </div>
+                                      
+                                 </div>
+                                
                                  </div>
                                  <!-- Ad Box End -->
-                              </div>
+                                    
                            </div>
-                           <div class="item">
-                              <div class="col-md-12 col-xs-12 col-sm-12">
-                                 <!-- Ad Box -->
-                                 <div class="white category-grid-box-1 ">
-                                    <div class="featured-ribbon">
-                                       <span>Featured</span>
-                                    </div>
-                                    <!-- Image Box -->
-                                    <div class="image"> <img alt="Carspot" src="images/posting/voitures/1.jpg" class="img-responsive">
-                                    </div>
-                                    <!-- Short Description -->
-                                    <div class="short-description-1 ">
-                                       <!-- Category Title -->
-                                       <div class="category-title"> <span><a href="#">Car & Bikes</a></span> </div>
-                                       <!-- Ad Title -->
-                                       <h3>
-                                          <a title="" href="single-page-listing.html">2017 Audi A4 quattro Premium</a>
-                                       </h3>
-                                       <!-- Location -->
-                                       <p class="location"><i class="fa fa-map-marker"></i> Model Town Link Road London</p>
-                                       <!-- Price -->
-                                       <span class="ad-price">$210</span> 
-                                    </div>
-                                    <!-- Ad Meta Stats -->
-                                    <div class="ad-info-1">
-                                       <ul>
-                                          <li><i class="flaticon-fuel-1"></i>Diesel</li>
-                                          <li><i class="flaticon-dashboard"></i>35,000 km</li>
-                                          <li><i class="flaticon-engine-2"></i> 1800 cc</li>
-                                       </ul>
-                                    </div>
-                                 </div>
-                                 <!-- Ad Box End -->
-                              </div>
-                           </div>
-                           <div class="item">
-                              <div class="col-md-12 col-xs-12 col-sm-12">
-                                 <!-- Ad Box -->
-                                 <div class="white category-grid-box-1 ">
-                                    <div class="featured-ribbon">
-                                       <span>Featured</span>
-                                    </div>
-                                    <!-- Image Box -->
-                                    <div class="image"> <img alt="Carspot" src="images/posting/logements/2.jpg" class="img-responsive">
-                                    </div>
-                                    <!-- Short Description -->
-                                    <div class="short-description-1 ">
-                                       <!-- Category Title -->
-                                       <div class="category-title"> <span><a href="#">Car & Bikes</a></span> </div>
-                                       <!-- Ad Title -->
-                                       <h3>
-                                          <a title="" href="single-page-listing.html">Porsche 911 Carrera 2017 </a>
-                                       </h3>
-                                       <!-- Location -->
-                                       <p class="location"><i class="fa fa-map-marker"></i> Model Town Link Road London</p>
-                                       <!-- Price -->
-                                       <span class="ad-price">$120</span> 
-                                    </div>
-                                    <!-- Ad Meta Stats -->
-                                    <div class="ad-info-1">
-                                       <ul>
-                                          <li><i class="flaticon-fuel-1"></i>Diesel</li>
-                                          <li><i class="flaticon-dashboard"></i>35,000 km</li>
-                                          <li><i class="flaticon-engine-2"></i> 1800 cc</li>
-                                       </ul>
-                                    </div>
-                                 </div>
-                                 <!-- Ad Box End -->
-                              </div>
-                           </div>
-                           <div class="item">
-                              <div class="col-md-12 col-xs-12 col-sm-12">
-                                 <!-- Ad Box -->
-                                 <div class="white category-grid-box-1 ">
-                                    <div class="featured-ribbon">
-                                       <span>Featured</span>
-                                    </div>
-                                    <!-- Image Box -->
-                                    <div class="image"> <img alt="Carspot" src="images/posting/voitures/3.jpg" class="img-responsive">
-                                    </div>
-                                    <!-- Short Description -->
-                                    <div class="short-description-1 ">
-                                       <!-- Category Title -->
-                                       <div class="category-title"> <span><a href="#">Car & Bikes</a></span> </div>
-                                       <!-- Ad Title -->
-                                       <h3>
-                                          <a title="" href="single-page-listing.html">2014 Ford Shelby GT500 Coupe</a>
-                                       </h3>
-                                       <!-- Location -->
-                                       <p class="location"><i class="fa fa-map-marker"></i> Model Town Link Road London</p>
-                                       <!-- Price -->
-                                       <span class="ad-price">$420</span> 
-                                    </div>
-                                    <!-- Ad Meta Stats -->
-                                    <div class="ad-info-1">
-                                       <ul>
-                                          <li><i class="flaticon-fuel-1"></i>Diesel</li>
-                                          <li><i class="flaticon-dashboard"></i>35,000 km</li>
-                                          <li><i class="flaticon-engine-2"></i> 1800 cc</li>
-                                       </ul>
-                                    </div>
-                                 </div>
-                                 <!-- Ad Box End -->
-                              </div>
-                           </div>
-                           <div class="item">
-                              <div class="col-md-12 col-xs-12 col-sm-12">
-                                 <!-- Ad Box -->
-                                 <div class="white category-grid-box-1 ">
-                                    <div class="featured-ribbon">
-                                       <span>Featured</span>
-                                    </div>
-                                    <!-- Image Box -->
-                                    <div class="image"> <img alt="Carspot" src="images/posting/logements/3.jpg" class="img-responsive">
-                                    </div>
-                                    <!-- Short Description -->
-                                    <div class="short-description-1 ">
-                                       <!-- Category Title -->
-                                       <div class="category-title"> <span><a href="#">Car & Bikes</a></span> </div>
-                                       <!-- Ad Title -->
-                                       <h3>
-                                          <a title="" href="single-page-listing.html">Honda Civic 2017 Sports Edition</a>
-                                       </h3>
-                                       <!-- Location -->
-                                       <p class="location"><i class="fa fa-map-marker"></i> Model Town Link Road London</p>
-                                       <!-- Price -->
-                                       <span class="ad-price">$370</span> 
-                                    </div>
-                                    <!-- Ad Meta Stats -->
-                                    <div class="ad-info-1">
-                                       <ul>
-                                          <li><i class="flaticon-fuel-1"></i>Diesel</li>
-                                          <li><i class="flaticon-dashboard"></i>35,000 km</li>
-                                          <li><i class="flaticon-engine-2"></i> 1800 cc</li>
-                                       </ul>
-                                    </div>
-                                 </div>
-                                 <!-- Ad Box End -->
-                              </div>
-                           </div>
-                           <div class="item">
-                              <div class="col-md-12 col-xs-12 col-sm-12">
-                                 <!-- Ad Box -->
-                                 <div class="white category-grid-box-1 ">
-                                    <div class="featured-ribbon">
-                                       <span>Featured</span>
-                                    </div>
-                                    <!-- Image Box -->
-                                    <div class="image"> <img alt="Carspot" src="images/posting/voitures/6.jpg" class="img-responsive">
-                                    </div>
-                                    <!-- Short Description -->
-                                    <div class="short-description-1 ">
-                                       <!-- Category Title -->
-                                       <div class="category-title"> <span><a href="#">Car & Bikes</a></span> </div>
-                                       <!-- Ad Title -->
-                                       <h3>
-                                          <a title="" href="single-page-listing.html">McLaren F1 Sports Car</a>
-                                       </h3>
-                                       <!-- Location -->
-                                       <p class="location"><i class="fa fa-map-marker"></i> Model Town Link Road London</p>
-                                       <!-- Price -->
-                                       <span class="ad-price">$990</span> 
-                                    </div>
-                                    <!-- Ad Meta Stats -->
-                                    <div class="ad-info-1">
-                                       <ul>
-                                          <li><i class="flaticon-fuel-1"></i>Diesel</li>
-                                          <li><i class="flaticon-dashboard"></i>35,000 km</li>
-                                          <li><i class="flaticon-engine-2"></i> 1800 cc</li>
-                                       </ul>
-                                    </div>
-                                 </div>
-                                 <!-- Ad Box End -->
-                              </div>
-                           </div>
-                           <div class="item">
-                              <div class="col-md-12 col-xs-12 col-sm-12">
-                                 <!-- Ad Box -->
-                                 <div class="white category-grid-box-1 ">
-                                    <div class="featured-ribbon">
-                                       <span>Featured</span>
-                                    </div>
-                                    <!-- Image Box -->
-                                    <div class="image"> <img alt="Carspot" src="images/posting/voitures/7.jpg" class="img-responsive">
-                                    </div>
-                                    <!-- Short Description -->
-                                    <div class="short-description-1 ">
-                                       <!-- Category Title -->
-                                       <div class="category-title"> <span><a href="#">Car & Bikes</a></span> </div>
-                                       <!-- Ad Title -->
-                                       <h3>
-                                          <a title="" href="single-page-listing.html">2015 Lamborghini Huracan</a>
-                                       </h3>
-                                       <!-- Location -->
-                                       <p class="location"><i class="fa fa-map-marker"></i> Model Town Link Road London</p>
-                                       <!-- Price -->
-                                       <span class="ad-price">$450</span> 
-                                    </div>
-                                    <!-- Ad Meta Stats -->
-                                    <div class="ad-info-1">
-                                       <ul>
-                                          <li><i class="flaticon-fuel-1"></i>Diesel</li>
-                                          <li><i class="flaticon-dashboard"></i>35,000 km</li>
-                                          <li><i class="flaticon-engine-2"></i> 1800 cc</li>
-                                       </ul>
-                                    </div>
-                                 </div>
-                                 <!-- Ad Box End -->
-                              </div>
-                           </div>
-                           <div class="item">
-                              <div class="col-md-12 col-xs-12 col-sm-12">
-                                 <!-- Ad Box -->
-                                 <div class="white category-grid-box-1 ">
-                                    <div class="featured-ribbon">
-                                       <span>Featured</span>
-                                    </div>
-                                    <!-- Image Box -->
-                                    <div class="image"> <img alt="Carspot" src="images/posting/logements/4.jpg" class="img-responsive">
-                                    </div>
-                                    <!-- Short Description -->
-                                    <div class="short-description-1 ">
-                                       <!-- Category Title -->
-                                       <div class="category-title"> <span><a href="#">Car & Bikes</a></span> </div>
-                                       <!-- Ad Title -->
-                                       <h3>
-                                          <a title="" href="single-page-listing.html">Honda Civic 2017 Sports Edition</a>
-                                       </h3>
-                                       <!-- Location -->
-                                       <p class="location"><i class="fa fa-map-marker"></i> Model Town Link Road London</p>
-                                       <!-- Price -->
-                                       <span class="ad-price">$370</span> 
-                                    </div>
-                                    <!-- Ad Meta Stats -->
-                                    <div class="ad-info-1">
-                                       <ul>
-                                          <li><i class="flaticon-fuel-1"></i>Diesel</li>
-                                          <li><i class="flaticon-dashboard"></i>35,000 km</li>
-                                          <li><i class="flaticon-engine-2"></i> 1800 cc</li>
-                                       </ul>
-                                    </div>
-                                 </div>
-                                 <!-- Ad Box End -->
-                              </div>
-                           </div>
-                           <div class="item">
-                              <div class="col-md-12 col-xs-12 col-sm-12">
-                                 <!-- Ad Box -->
-                                 <div class="white category-grid-box-1 ">
-                                    <div class="featured-ribbon">
-                                       <span>Featured</span>
-                                    </div>
-                                    <!-- Image Box -->
-                                    <div class="image"> <img alt="Carspot" src="images/posting/voitures/9.jpg" class="img-responsive">
-                                    </div>
-                                    <!-- Short Description -->
-                                    <div class="short-description-1 ">
-                                       <!-- Category Title -->
-                                       <div class="category-title"> <span><a href="#">Car & Bikes</a></span> </div>
-                                       <!-- Ad Title -->
-                                       <h3>
-                                          <a title="" href="single-page-listing.html">Audi A4 2.0T quattro Premium</a>
-                                       </h3>
-                                       <!-- Location -->
-                                       <p class="location"><i class="fa fa-map-marker"></i> Model Town Link Road London</p>
-                                       <!-- Price -->
-                                       <span class="ad-price">$100</span> 
-                                    </div>
-                                    <!-- Ad Meta Stats -->
-                                    <div class="ad-info-1">
-                                       <ul>
-                                          <li><i class="flaticon-fuel-1"></i>Diesel</li>
-                                          <li><i class="flaticon-dashboard"></i>35,000 km</li>
-                                          <li><i class="flaticon-engine-2"></i> 1800 cc</li>
-                                       </ul>
-                                    </div>
-                                 </div>
-                                 <!-- Ad Box End -->
-                              </div>
-                           </div>
+                           
                         </div>
+                        @endforeach  
                      </div>
+                     
                   </div>
                   <!-- Middle Content Box End -->
+                  
                </div>
                <!-- Row End -->
+               
             </div>
             <!-- Main Container End -->
+             
          </section>
          <!-- =-=-=-=-=-=-= Featured Ads End =-=-=-=-=-=-= -->
          <!-- =-=-=-=-=-=-= Buy Or Sale =-=-=-=-=-=-= -->
@@ -907,5 +652,7 @@
           <!-- =-=-=-=-=-=-= Car Inspection =-=-=-=-=-=-= -->
         
          <!-- =-=-=-=-=-=-= Car Inspection End =-=-=-=-=-=-= -->
+         <!-- Ajouter un script pour initialiser le carrousel -->
+
 
 @endsection

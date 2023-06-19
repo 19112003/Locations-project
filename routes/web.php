@@ -38,18 +38,14 @@ require __DIR__.'/auth.php';
  * Page d'accueil
 */
 
-Route::get('/', function () {
-    return view('index');
-});
+Route::get('/', [VehiculeController::class, 'home']);
 
 
 /**
  * Barre de navigation
 */
 
-Route::get('/home', function () {
-    return view('index');
-});
+Route::get('/home', [VehiculeController::class, 'home']);
 
 Route::get('/user', function () {
     return view('profiluser');

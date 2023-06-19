@@ -34,8 +34,7 @@ class VehiculeController extends Controller
         foreach ($vehicules as $vehicule) {
             $vehicule->images = VehiculeImage::where('vehicule_id', $vehicule->id)->get();
         }
-
-
+        
         // dd($vehicule);
         return view('index', compact('vehicules'));
     }
