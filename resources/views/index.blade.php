@@ -182,187 +182,54 @@
 
                   <div class="recent-tab">
                      <ul class="nav nav-tabs" role="tablist">
-                        <li role="presentation" class="active"><a href="#newcars" role="tab" data-toggle="tab" aria-expanded="true">Logements</a></li>
-                        <li role="presentation" class=""><a href="#usedcars" role="tab" data-toggle="tab" aria-expanded="false">Véhicules</a></li>
+                        <li role="presentation" class="active"><a href="#newcars" role="tab" data-toggle="tab" aria-expanded="true">Véhicules</a></li>
+                        <li role="presentation" class=""><a href="#usedcars" role="tab" data-toggle="tab" aria-expanded="false">Logements</a></li>
                      </ul>
                   </div>
                   <!-- Recently Listed New Cars -->
+                  
                   <div class="tab-content">
                      <div role="tabpanel" class="tab-pane active" id="newcars">
                         <!-- Middle Content Box -->
                         <!-- Listing Ad Grid -->
+                        @foreach ($vehicules as $vehicule)
                         <div class="col-md-4 col-lg-4 col-sm-6 col-xs-12  ">
-                           <div class="white category-grid-box-1 ">
+                           <div class="category-grid-box-1 ">
                               <!-- Image Box -->
-                              <div class="image"> <img alt="Carspot" src="images/posting/logements/2.jpg" class="img-responsive"></div>
+                              <div class="image"> 
+                                 @foreach($vehicule->images as $image)
+                                 <img alt="{{ $image->image }}" src="{{ Storage::url($image->path) }}" class="img-responsive">
+                                 @endforeach
+                              </div>
+                             
                               <!-- Short Description -->
                               <div class="short-description-1 ">
                                  <!-- Category Title -->
                                  <div class="category-title"> <span><a href="#">Car & Bikes</a></span> </div>
                                  <!-- Ad Title -->
                                  <h3>
-                                    <a title="" href="single-page-listing.html">Mazda RX8 Fro sale</a>
+                                    <a title="" href="single-page-listing.html">{{$vehicule->modele }}</a>
                                  </h3>
                                  <!-- Location -->
                                  <p class="location"><i class="fa fa-map-marker"></i> Model Town Link Road London</p>
                                  <!-- Price -->
-                                 <span class="ad-price">$1270</span> 
+                                 <span class="ad-price">{{$vehicule->prix }}$</span> 
                               </div>
                               <!-- Ad Meta Stats -->
                               <div class="ad-info-1">
                                  <ul>
-                                    <li><i class="flaticon-fuel-1"></i>Diesel</li>
-                                    <li><i class="flaticon-dashboard"></i>35,000 km</li>
-                                    <li><i class="flaticon-engine-2"></i> 1800 cc</li>
+                                    <li><i class="fas fa-gas-pump"></i>{{$vehicule -> energie }}</li>
+                                    <li><i class="fas fa-tachometer-alt"></i>{{$vehicule -> kilometrage }} km</li>
+                                    <li><i class="flaticon-engine-2"></i> {{$vehicule -> boite_vitesse }} cc</li>
                                  </ul>
                               </div>
                            </div>
+                           
                         </div>
+                        @endforeach
+                        
                         <!-- Listing Ad Grid -->
-                        <!-- Listing Ad Grid -->
-                        <div class="col-md-4 col-lg-4 col-sm-6 col-xs-12  ">
-                           <div class="white category-grid-box-1 ">
-                              <!-- Image Box -->
-                              <div class="image"> <img alt="Carspot" src="images/posting/logements/14.jpg" class="img-responsive"></div>
-                              <!-- Short Description -->
-                              <div class="short-description-1 ">
-                                 <!-- Category Title -->
-                                 <div class="category-title"> <span><a href="#">Car & Bikes</a></span> </div>
-                                 <!-- Ad Title -->
-                                 <h3>
-                                    <a title="" href="single-page-listing.html">Honda Civic 2017 Sports Edition</a>
-                                 </h3>
-                                 <!-- Location -->
-                                 <p class="location"><i class="fa fa-map-marker"></i> Model Town Link Road London</p>
-                                 <!-- Price -->
-                                 <span class="ad-price">$370</span> 
-                              </div>
-                              <!-- Ad Meta Stats -->
-                              <div class="ad-info-1">
-                                 <ul>
-                                    <li><i class="flaticon-fuel-1"></i>Diesel</li>
-                                    <li><i class="flaticon-dashboard"></i>35,000 km</li>
-                                    <li><i class="flaticon-engine-2"></i> 1800 cc</li>
-                                 </ul>
-                              </div>
-                           </div>
-                        </div>
-                        <!-- Listing Ad Grid -->
-                        <!-- Listing Ad Grid -->
-                        <div class="col-md-4 col-lg-4 col-sm-6 col-xs-12  ">
-                           <div class="white category-grid-box-1 ">
-                              <!-- Image Box -->
-                              <div class="image"> <img alt="Carspot" src="images/posting/logements/6.jpg" class="img-responsive"></div>
-                              <!-- Short Description -->
-                              <div class="short-description-1 ">
-                                 <!-- Category Title -->
-                                 <div class="category-title"> <span><a href="#">Car & Bikes</a></span> </div>
-                                 <!-- Ad Title -->
-                                 <h3>
-                                    <a title="" href="single-page-listing.html">Honda Civic 2017 Sports Edition</a>
-                                 </h3>
-                                 <!-- Location -->
-                                 <p class="location"><i class="fa fa-map-marker"></i> Model Town Link Road London</p>
-                                 <!-- Price -->
-                                 <span class="ad-price">$370</span> 
-                              </div>
-                              <!-- Ad Meta Stats -->
-                              <div class="ad-info-1">
-                                 <ul>
-                                    <li><i class="flaticon-fuel-1"></i>Diesel</li>
-                                    <li><i class="flaticon-dashboard"></i>35,000 km</li>
-                                    <li><i class="flaticon-engine-2"></i> 1800 cc</li>
-                                 </ul>
-                              </div>
-                           </div>
-                        </div>
-                        <!-- Listing Ad Grid -->
-                        <!-- Listing Ad Grid -->
-                        <div class="col-md-4 col-lg-4 col-sm-6 col-xs-12  ">
-                           <div class="white category-grid-box-1 ">
-                              <!-- Image Box -->
-                              <div class="image"> <img alt="Carspot" src="images/posting/logements/10.jpg" class="img-responsive"></div>
-                              <!-- Short Description -->
-                              <div class="short-description-1 ">
-                                 <!-- Category Title -->
-                                 <div class="category-title"> <span><a href="#">Car & Bikes</a></span> </div>
-                                 <!-- Ad Title -->
-                                 <h3>
-                                    <a title="" href="single-page-listing.html">Honda Civic 2017 Sports Edition</a>
-                                 </h3>
-                                 <!-- Location -->
-                                 <p class="location"><i class="fa fa-map-marker"></i> Model Town Link Road London</p>
-                                 <!-- Price -->
-                                 <span class="ad-price">$370</span> 
-                              </div>
-                              <!-- Ad Meta Stats -->
-                              <div class="ad-info-1">
-                                 <ul>
-                                    <li><i class="flaticon-fuel-1"></i>Diesel</li>
-                                    <li><i class="flaticon-dashboard"></i>35,000 km</li>
-                                    <li><i class="flaticon-engine-2"></i> 1800 cc</li>
-                                 </ul>
-                              </div>
-                           </div>
-                        </div>
-                        <!-- Listing Ad Grid -->
-                        <!-- Listing Ad Grid -->
-                        <div class="col-md-4 col-lg-4 col-sm-6 col-xs-12  ">
-                           <div class="white category-grid-box-1 ">
-                              <!-- Image Box -->
-                              <div class="image"> <img alt="Carspot" src="images/posting/logements/6.jpg" class="img-responsive"></div>
-                              <!-- Short Description -->
-                              <div class="short-description-1 ">
-                                 <!-- Category Title -->
-                                 <div class="category-title"> <span><a href="#">Car & Bikes</a></span> </div>
-                                 <!-- Ad Title -->
-                                 <h3>
-                                    <a title="" href="single-page-listing.html">Honda Civic 2017 Sports Edition</a>
-                                 </h3>
-                                 <!-- Location -->
-                                 <p class="location"><i class="fa fa-map-marker"></i> Model Town Link Road London</p>
-                                 <!-- Price -->
-                                 <span class="ad-price">$370</span> 
-                              </div>
-                              <!-- Ad Meta Stats -->
-                              <div class="ad-info-1">
-                                 <ul>
-                                    <li><i class="flaticon-fuel-1"></i>Diesel</li>
-                                    <li><i class="flaticon-dashboard"></i>35,000 km</li>
-                                    <li><i class="flaticon-engine-2"></i> 1800 cc</li>
-                                 </ul>
-                              </div>
-                           </div>
-                        </div>
-                        <!-- Listing Ad Grid -->
-                        <!-- Listing Ad Grid -->
-                        <div class="col-md-4 col-lg-4 col-sm-6 col-xs-12  ">
-                           <div class="white category-grid-box-1 ">
-                              <!-- Image Box -->
-                              <div class="image"> <img alt="Carspot" src="images/posting/logements/9.jpg" class="img-responsive"></div>
-                              <!-- Short Description -->
-                              <div class="short-description-1 ">
-                                 <!-- Category Title -->
-                                 <div class="category-title"> <span><a href="#">Car & Bikes</a></span> </div>
-                                 <!-- Ad Title -->
-                                 <h3>
-                                    <a title="" href="single-page-listing.html">Honda Civic 2017 Sports Edition</a>
-                                 </h3>
-                                 <!-- Location -->
-                                 <p class="location"><i class="fa fa-map-marker"></i> Model Town Link Road London</p>
-                                 <!-- Price -->
-                                 <span class="ad-price">$370</span> 
-                              </div>
-                              <!-- Ad Meta Stats -->
-                              <div class="ad-info-1">
-                                 <ul>
-                                    <li><i class="flaticon-fuel-1"></i>Diesel</li>
-                                    <li><i class="flaticon-dashboard"></i>35,000 km</li>
-                                    <li><i class="flaticon-engine-2"></i> 1800 cc</li>
-                                 </ul>
-                              </div>
-                           </div>
-                        </div>
+                        
                         <!-- Listing Ad Grid -->
                         <div class="clearfix"></div>
                         <div class="text-center">

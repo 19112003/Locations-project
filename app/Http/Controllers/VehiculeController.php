@@ -34,10 +34,12 @@ class VehiculeController extends Controller
         foreach ($vehicules as $vehicule) {
             $vehicule->images = VehiculeImage::where('vehicule_id', $vehicule->id)->get();
         }
-        
+
         // dd($vehicule);
         return view('index', compact('vehicules'));
     }
+
+   
 
     /**
      * Show the form for creating a new resource.
@@ -144,7 +146,7 @@ class VehiculeController extends Controller
     {
         $vehicule = Vehicule::findOrFail($id);
         $images = VehiculeImage::where('vehicule_id', $id)->get();
-        return view('vehicules.show', compact('vehicule', 'images'));
+        return view('vehicules.show-vehicule', compact('vehicule', 'images'));
     }
 
     /**

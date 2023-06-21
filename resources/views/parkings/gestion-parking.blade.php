@@ -176,7 +176,13 @@
                                                 <td>{{ $parking->city }}</td>
                                                 <td>{{ $parking->district}}</td>
                                                 <td><a href="/Parkings/show/{{$parking->id}}"><i class="far fa-eye"></i></a></td>
-                                                <td><button id="modifier-btn"><i class="fas fa-marker"></i></button></td>
+                                                <td>
+                                                   <div class="ad-share">
+                                                      <div data-toggle="modal" data-target=".share-ad">
+                                                         <i class="fas fa-marker"></i> 
+                                                      </div>
+                                                   </div>   
+                                                </td>
                                                 <td><a href="/Parkings/delete/{{$parking->id}}"><i class="far fa-trash-alt"></i></a></td>
                                              </tr>
                                        @endforeach
@@ -246,34 +252,29 @@
                                  </form>
                               </div>
 
-                             
-                             
-                           </div>
-                        </div>
-                     </div>
-                     <!-- Row End -->
-                  </div>
-                  <!-- Middle Content Area  End -->
+                             <!------------- Modifier Parking -------------->
+      <div class="modal fade share-ad" tabindex="-1" role="dialog" aria-hidden="true">
+         <div class="modal-dialog">
+            <div class="modal-content">
+               <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+                  <h3 class="modal-title">Modifier {{ $parking->name }}</h3>
                </div>
-            </div>
-            <!-- Main Container End -->
-         </section>
-         <!-- =-=-=-=-=-=-= Ads Archives End =-=-=-=-=-=-= -->
-          <!------------- Modifier Parking -------------->
-          
-         <div class="popup">
-            <div class="close-btn">&times;</div>
-            <div class="form">
-            <form method="POST" action="/addParking">
-               <h2>Modifier {{ $parking->name }}</h2>
-                     <div class="row">
-                        <div class="col-md-12 col-sm-12 col-xs-12">
-                           <label>Nom du Parking <span class="color-red">*</span> </label>
-                           <input name="name" id="name" type="text" class="form-control margin-bottom-20" required> 
-                        </div>
-                     </div>
-                  
-                                       <div class="row">
+               <div class="modal-body">
+                  <div class="recent-ads">
+                     <div class="recent-ads-list">
+                        <div class="recent-ads-container">
+                        <div class="form">
+                           <form method="POST" action="/Parkings/update/{{$parking->id}}">
+                              @csrf
+                                    <div class="row">
+                                       <div class="col-md-12 col-sm-12 col-xs-12">
+                                          <label>Nom du Parking <span class="color-red">*</span> </label>
+                                          <input name="name" id="name" type="text" class="form-control margin-bottom-20" required> 
+                                       </div>
+                                    </div>
+
+                                    <div class="row">
                                           <div class="col-md-6 col-sm-6 col-xs-12">
                                              <label>Sa Capacité <span class="color-red">*</span></label>
                                              <input name="capacity" id="capacity" type="number" class="form-control margin-bottom-20" placeholder="e.g: 20" required>
@@ -294,28 +295,42 @@
                                                 <option value="Sud-Ouest">Sud-Ouest</option>
                                              </select>
                                           </div>
-                                       </div>
+                                    </div>
 
-                                       <div class="row">
-                                          <div class="col-md-6 col-sm-12 col-xs-12 margin-bottom-20">
-                                             <label>Ville <span class="color-red">*</span></label>
-                                             <input name="city" id="city" type="text" class="form-control margin-bottom-20" placeholder="e.g: Douala" required>
-                                          </div>
-                                          <div class="col-md-6 col-sm-6 col-xs-12 margin-bottom-20">
-                                             <label>Quartier <span class="color-red">*</span></label>
-                                             <input name="district" id="district" type="text" class="form-control margin-bottom-20" placeholder="e.g: Bonamoussadi" required>
-                                          </div>
+                                    <div class="row">
+                                       <div class="col-md-6 col-sm-12 col-xs-12 margin-bottom-20">
+                                          <label>Ville <span class="color-red">*</span></label>
+                                          <input name="city" id="city" type="text" class="form-control margin-bottom-20" placeholder="e.g: Douala" required>
                                        </div>
+                                       <div class="col-md-6 col-sm-6 col-xs-12 margin-bottom-20">
+                                          <label>Quartier <span class="color-red">*</span></label>
+                                          <input name="district" id="district" type="text" class="form-control margin-bottom-20" placeholder="e.g: Bonamoussadi" required>
+                                       </div>
+                                    </div>
 
-                                       <div class="row">
-                                          <div class="col-md-4 col-sm-4 col-xs-12 text-right">
-                                             <button type="submit" class="btn btn-theme btn-sm">Modifier</button>
-                                          </div>
+                                    <div class="row">
+                                       <div class="col-md-4 col-sm-4 col-xs-12 text-right">
+                                          <button type="submit" class="btn btn-theme btn-sm">Modifier</button>
                                        </div>
-                        
-            </form>
+                                    </div>
+                            
+                  
+                                    </div>
+                                 </div>
+                              </div>
+                             
+                           </div>
+                        </div>
+                     </div>
+                     <!-- Row End -->
+                  </div>
+                  <!-- Middle Content Area  End -->
+               </div>
             </div>
-         </div>
-         <script src="{{ asset('js/popup.js') }}"></script>
+            <!-- Main Container End -->
+         </section>
+         <!-- =-=-=-=-=-=-= Ads Archives End =-=-=-=-=-=-= -->
+          
+          
 
 @endsection

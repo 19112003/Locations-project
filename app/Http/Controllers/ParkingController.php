@@ -79,7 +79,10 @@ class ParkingController extends Controller
      */
     public function edit(Parking $parking)
     {
-        //
+        $parking = Parking::findOrFail($id);
+        // dd($parking);
+        
+        return view('parkings.gestion-parking', compact('parking'));
     }
 
     /**
@@ -89,9 +92,30 @@ class ParkingController extends Controller
      * @param  \App\Models\Parking  $parking
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Parking $parking)
+    public function update(Request $request, $id)
     {
-        //
+        $parking = Parking::findOrFail($id);
+
+        $request->validate([
+            'name' => 'required',
+            'capacity' => 'required',
+            'region' => 'required|max:255',
+            'city' => 'required|max:255',
+            'district' => 'required|max:255',
+            
+        ]);
+
+        
+        
+        $parking->name = $request->name;
+        $parking->capacity = $request->capacity;
+        $parking->region = $request->region;
+        $parking->city = $request->city;
+        $parking->district = $request->district;
+        $parking->save();
+    
+        // $parking = parking::create($validatedData);
+        return redirect('/Parkings')->with('success', 'parking modifié avec succès');
     }
 
     /**

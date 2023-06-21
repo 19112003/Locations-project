@@ -9,13 +9,16 @@
       <![endif]-->
       <meta name="description" content="">
       <meta name="author" content="ScriptsBundle">
-      <title>Carspot | Car Dealership - Vehicle Marketplace And Car Services</title>
+      <title>StayRide | Car Dealership - Lodging Marketplace And Car Services</title>
       <!-- =-=-=-=-=-=-= Favicons Icon =-=-=-=-=-=-= -->
       <link rel="icon" href="{{ asset('images/favicon.ico') }}" type="image/x-icon" />
       <!-- =-=-=-=-=-=-= Mobile Specific =-=-=-=-=-=-= -->
       <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+      <!-- Latest compiled and minified CSS -->
+<!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"> -->
       <!-- =-=-=-=-=-=-= Bootstrap CSS Style =-=-=-=-=-=-= -->
-      <link rel="stylesheet" href="{{ asset('css/bootstrap.css') }}">
+       <link rel="stylesheet" href="{{ asset('css/bootstrap.css') }}"> 
       <!-- =-=-=-=-=-=-= Template CSS Style =-=-=-=-=-=-= -->
       <link rel="stylesheet" href="{{ asset('css/style.css') }}">
       <link href="{{ asset('css/app.css') }}" rel="stylesheet" type="text/css" />
@@ -99,7 +102,7 @@
                            <li class="hidden-xs hidden-sm"><a href="{{ route('register') }}"><i class="fa fa-unlock" aria-hidden="true"></i> Inscription</a></li>
                            @auth
                            <li class="dropdown">
-                              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><img class="img-circle resize" alt="" src="images/users/3.jpg"> <span class="myname hidden-xs"> {{ Auth::user()->name }} </span> <span class="caret"></span></a>
+                              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><img class="img-circle resize" alt="" src="{{ asset('images/users/3.jpg') }}"> <span class="myname hidden-xs"> {{ Auth::user()->name }} </span> <span class="caret"></span></a>
                               <ul class="dropdown-menu">
                                  <li><a href="/user">Profil utilisateur</a></li>
                                  <li><a href="/Parkings">Parkings</a></li>
@@ -147,7 +150,7 @@
                         <!-- menu logo -->
                         <ul class="menu-logo">
                            <li>
-                              <a href="index.html"><img src="images/logo.png" alt="logo"> </a>
+                              <a href="index.html"><img src="{{ asset('images/test.png') }}" alt="logo"> </a>
                            </li>
                         </ul>
                         <!-- menu links -->
@@ -202,6 +205,7 @@
    @yield('inscription')
    @yield('contact')
    @yield('add-parking')
+   @yield('show-vehicule')
 
 
      <!-- =-=-=-=-=-=-= FOOTER =-=-=-=-=-=-= -->
@@ -213,11 +217,11 @@
                      <div class="col-md-3  col-sm-6 col-xs-12">
                         <!-- Info Widget -->
                         <div class="widget">
-                           <div class="logo"> <img alt="" src="images/logo.png"> </div>
-                           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur et dolor eget erat fringilla port.</p>
+                           <div class="logo"> <img alt="" src="{{ asset('images/test.png') }}"> </div>
+                           <p>Nous mettons à votre disposition diverses variétés de logements et véhicules dans tout le Cameroun.</p>
                            <ul class="apps-donwloads">
-                              <li><img src="images/googleplay.png" alt=""></li>
-                              <li><img src="images/appstore.png" alt=""></li>
+                              <li><img src="{{ asset('images/googleplay.png') }}" alt=""></li>
+                              <li><img src="{{ asset('images/appstore.png') }}" alt=""></li>
                            </ul>
                         </div>
                                                  
@@ -226,7 +230,7 @@
                      <div class="col-md-2 col-sm-6 col-xs-12">
                         <!-- Follow Us -->
                         <div class="widget socail-icons">
-                           <h5>Follow Us</h5>
+                           <h5>Suivez nous</h5>
                            <ul>
                               <li><a class="Facebook" href="#"><i class="fa fa-facebook"></i></a><span>Facebook</span></li>
                               <li><a class="Twitter" href="#"><i class="fa fa-twitter"></i></a><span>Twitter</span></li>
@@ -239,12 +243,12 @@
                      <div class="col-md-2  col-sm-6 col-xs-12">
                         <!-- Follow Us -->
                         <div class="widget my-quicklinks">
-                           <h5>Quick Links</h5>
+                           <h5>Liens Rapides</h5>
                            <ul >
-                              <li><a href="#">About Us</a></li>
+                              <li><a href="#">A propos</a></li>
                              <li><a href="#">Faqs</a></li>
-                             <li><a href="#">Packages</a></li>
-                             <li><a href="#">Contact Us</a></li>
+                             <li><a href="/home#new">Nouveautés</a></li>
+                             <li><a href="/contact">Contactez nous</a></li>
                            </ul>
                         </div>
                         <!-- Follow Us End -->
@@ -252,9 +256,9 @@
                      <div class="col-md-5  col-sm-6 col-xs-12">
                         <!-- Newslatter -->
                         <div class="widget widget-newsletter">
-                           <h5>Singup for Weekly Newsletter</h5>
+                           <h5>Souscrivez à notre Newsletter</h5>
                            <div class="fieldset">
-                              <p>We may send you information about related events, webinars, products and services which we believe.</p>
+                              <p>Nous vous enverrons des informations concernant des évènements, des webinars, ainsi que nos produits et services.</p>
                               <form>
                                  <input class="" value="Enter your email address" type="text">
                                  <input class="submit-btn" name="submit" value="Submit" type="submit"> 
@@ -262,7 +266,7 @@
                            </div>
                         </div>
                         <div class="copyright">
-                           <p>© 2017 Carspot All rights reserved. Design by <a href="http://themeforest.net/user/scriptsbundle/portfolio" target="_blank">Scriptsbundle</a> </p>
+                           <p>© 2023 StayRide All rights reserved. Design by <a href="#" target="_blank">Scorpio</a> </p>
                         </div>   
                         <!-- Newslatter -->
                      </div>
@@ -356,5 +360,8 @@
          <script src="{{ asset('js/app.js') }}" type="text/js"></script>  
       </script>
       <!-- JS -->
+
+      <!-- Latest compiled and minified JavaScript -->
+<!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script> -->
 </body>
 </html>

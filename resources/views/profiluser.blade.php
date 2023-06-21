@@ -127,9 +127,10 @@
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="#">
-                                        <div class="menu-name">Déconnexion</div>
-                                    </a>
+                                    <form method="POST" action="{{ route('logout') }}">
+                                       @csrf
+                                       <button type="submit" class="btn-logout"><strong>Déconnexion</strong></button>
+                                    </form>
                                 </li>
                                 <li>
                                     <a href="#">

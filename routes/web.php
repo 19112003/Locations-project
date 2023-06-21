@@ -21,7 +21,7 @@ use App\Http\Controllers\ParkingController;
 });*/
 
 Route::get('/dashboard', function () {
-    return view('index');
+    return view('profiluser');
 })->middleware(['auth'])->name('dashboard');
 
 require __DIR__.'/auth.php';
@@ -46,6 +46,7 @@ Route::get('/', [VehiculeController::class, 'home']);
 */
 
 Route::get('/home', [VehiculeController::class, 'home']);
+
 
 Route::get('/user', function () {
     return view('profiluser');

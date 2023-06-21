@@ -67,10 +67,10 @@
                         <div class="clearfix"></div>
                         <!-- Ads Archive -->
                         <div class="grid-style-4">
-                           <div class="posts-masonry">
+                           <div class="row">
                            @foreach($vehicules as $vehicule)
                               <div class="col-md-6 col-xs-12 col-sm-6">
-                                 
+                              
                                  <!-- Ad Box -->
                                  <div class="category-grid-box">
                                     
@@ -100,7 +100,7 @@
                                           <!-- Ad Category -->
                                           <div class="category-title"> <span><a href="#">Car & Bikes</a></span> </div>
                                           <!-- Ad Title -->
-                                          <h3><a title="" href="single-page-listing.html">{{$vehicule->modele }} </a></h3>
+                                          <h3><a title="" href="/vehicules/show/{{$vehicule->id}}">{{$vehicule->modele }} </a></h3>
                                           <!-- Price -->
                                           <div class="price">{{$vehicule->prix }}$ <span class="negotiable">(Negotiable)</span></div>
                                        </div>
@@ -114,10 +114,11 @@
                                        </div>
                                     </div>
                                     <!-- Ad Box End -->
-                             
+                                    
                               </div>
-                              @endforeach  
-                           </div>  
+                              @endforeach
+                           </div> 
+                          
                         </div>
                         <!-- Ads Archive End -->  
                         <div class="clearfix"></div>
