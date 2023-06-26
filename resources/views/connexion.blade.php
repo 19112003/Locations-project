@@ -78,7 +78,7 @@
                            </div>
                            <button type="submit" class="btn btn-theme btn-lg btn-block">Connexion</button>
                            <br>
-                           <div class="text-center pt-4 text-muted">Vous n'avez pas de compte? <a href="#">Inscrivez vous</a> </div>
+                           <div class="text-center pt-4 text-muted">Vous n'avez pas de compte? <a href="register">Inscrivez vous</a> </div>
                         </form>
                      </div>
                      <!-- Form -->

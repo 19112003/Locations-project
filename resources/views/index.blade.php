@@ -86,7 +86,7 @@
                                        <div class="category-title"> <span><a href="#">Car & Bikes</a></span> </div>
                                        <!-- Ad Title -->
                                        <h3>
-                                          <a title="" href="single-page-listing.html">{{$vehicule->modele }}  </a>
+                                          <a title="" href="/vehicules/show/{{$vehicule->id}}">{{$vehicule->modele }}  </a>
                                        </h3>
                                        <!-- Location -->
                                        <p class="location"><i class="fa fa-map-marker"></i> Model Town Link Road London</p>

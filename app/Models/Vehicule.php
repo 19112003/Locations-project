@@ -25,4 +25,10 @@ class Vehicule extends Model
     {
         return $this->belongsTo(Parking::class);
     }
+
+    public function locations()
+    {
+        return $this->hasMany(Location::class);
+    }
+
 }

@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\VehiculeController;
 use App\Http\Controllers\LodgingController;
 use App\Http\Controllers\ParkingController;
+use App\Http\Controllers\LocationController;
 
 /*
 |--------------------------------------------------------------------------
@@ -132,3 +133,16 @@ Route::get('/Parkings/show/{id}',  [ParkingController::class, 'show']);
 // Route::get('/showParkings',  [ParkingController::class, 'edit']);
 Route::post('/Parkings/update/{id}',  [ParkingController::class, 'update']);
 Route::get('/Parkings/delete/{id}',  [ParkingController::class, 'destroy']);
+
+
+/**
+ * Route pour les locations
+*/
+
+// Route::get('/createLocation', [LocationController::class, 'create']);
+
+Route::middleware(['auth'])->group(function () {
+    Route::get('/locations/create/{vehicule_id}', [LocationController::class, 'create']);
+    Route::post('/locations', [LocationController::class, 'store']);
+    // Autres routes de location
+});

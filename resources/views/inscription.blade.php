@@ -96,7 +96,7 @@
                            </div>
                            <button type="submit" class="btn btn-theme btn-lg btn-block">Inscription</button>
                            <br>
-                           <div class="text-center pt-4 text-muted">Vous avez déjà un compte? <a href="#">Connexion</a> </div>
+                           <div class="text-center pt-4 text-muted">Vous avez déjà un compte? <a href="login">Connexion</a> </div>
                         </form>
                      </div>
                      <!-- Form -->
