@@ -34,11 +34,11 @@
                   <!-- Middle Content Area -->
                   <div class="col-md-12 col-xs-12 col-sm-12">
                      <section class="search-result-item">
-                        <a class="image-link" href="#"><img class="image center-block" alt="" src="images/users/9.jpg"> </a>
+                        <a class="image-link" href="#"><img class="image center-block" alt="" src="images/users/1.jpg"> </a>
                         <div class="search-result-item-body">
                            <div class="row">
                               <div class="col-md-5 col-sm-12 col-xs-12">
-                                 <h4 class="search-result-item-heading"><a href="#">Umair</a></h4>
+                                 <h4 class="search-result-item-heading"><a href="#">Maéva</a></h4>
                                  <p class="info">
                                     <span><a href="profile.html"><i class="fa fa-user "></i>Profil </a></span>
                                     <span><a href="javascript:void(0)"><i class="fa fa-edit"></i>Edit Profile </a></span>
@@ -270,18 +270,18 @@
                                     <div class="row">
                                        <div class="col-md-12 col-sm-12 col-xs-12">
                                           <label>Nom du Parking <span class="color-red">*</span> </label>
-                                          <input name="name" id="name" type="text" class="form-control margin-bottom-20" required> 
+                                          <input name="name" id="name" type="text" class="form-control margin-bottom-20" value="{{ old('nom', $parking->name) }}" required> 
                                        </div>
                                     </div>
 
                                     <div class="row">
                                           <div class="col-md-6 col-sm-6 col-xs-12">
                                              <label>Sa Capacité <span class="color-red">*</span></label>
-                                             <input name="capacity" id="capacity" type="number" class="form-control margin-bottom-20" placeholder="e.g: 20" required>
+                                             <input name="capacity" id="capacity" type="number" class="form-control margin-bottom-20" placeholder="e.g: 20" value="{{ old('nom', $parking->capacity) }}" >
                                           </div>
                                           <div class="col-md-6 col-sm-6 col-xs-12">  
                                              <label>Région <span class="color-red">*</span></label>
-                                             <select name="region" id="region" class="form-control" required>
+                                             <select name="region" id="region" class="form-control" value="{{ old('nom', $parking->region) }}" >
                                                 <option label="Any Make"></option>
                                                 <option value="Adamoua">Adamaoua</option>
                                                 <option value="Centre">Centre</option>
@@ -300,11 +300,11 @@
                                     <div class="row">
                                        <div class="col-md-6 col-sm-12 col-xs-12 margin-bottom-20">
                                           <label>Ville <span class="color-red">*</span></label>
-                                          <input name="city" id="city" type="text" class="form-control margin-bottom-20" placeholder="e.g: Douala" required>
+                                          <input name="city" id="city" type="text" class="form-control margin-bottom-20" value="{{ old('nom', $parking->city) }}" >
                                        </div>
                                        <div class="col-md-6 col-sm-6 col-xs-12 margin-bottom-20">
                                           <label>Quartier <span class="color-red">*</span></label>
-                                          <input name="district" id="district" type="text" class="form-control margin-bottom-20" placeholder="e.g: Bonamoussadi" required>
+                                          <input name="district" id="district" type="text" class="form-control margin-bottom-20" value="{{ old('nom', $parking->district) }}" >
                                        </div>
                                     </div>
 

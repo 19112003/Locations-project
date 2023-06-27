@@ -5,6 +5,7 @@ use App\Http\Controllers\VehiculeController;
 use App\Http\Controllers\LodgingController;
 use App\Http\Controllers\ParkingController;
 use App\Http\Controllers\LocationController;
+use App\Http\Controllers\ContactController;
 
 /*
 |--------------------------------------------------------------------------
@@ -61,9 +62,8 @@ Route::get('/user', function () {
     return view('inscription');
 });*/
 
-Route::get('/contact', function () {
-    return view('contact');
-});
+Route::get('/contact', [ContactController::class, 'showContactForm']);
+Route::post('/contacts', [ContactController::class, 'sendContactForm']);
 
 
 

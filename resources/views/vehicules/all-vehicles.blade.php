@@ -102,7 +102,7 @@
                                           <!-- Ad Title -->
                                           <h3><a title="" href="/vehicules/show/{{$vehicule->id}}">{{$vehicule->modele }} </a></h3>
                                           <!-- Price -->
-                                          <div class="price">{{$vehicule->prix }}$ <span class="negotiable">(Negotiable)</span></div>
+                                          <div class="price">{{$vehicule->prix }}FCFA <span class="negotiable">(Negotiable)</span></div>
                                        </div>
                                        <!-- Addition Info -->
                                        <div class="ad-info">
@@ -199,7 +199,7 @@
                                              <label for="minimal-checkbox-8">Acura </label>
                                           </li>
                                        </ul>
-                                       <a href=".html" data-toggle="modal" class="pull-right"><strong>View All</strong></a>
+                                       <a href=".html" data-toggle="modal" class="pull-right"><strong>Voir tout</strong></a>
                                     </div>
                                     <!-- Brands List End -->                 
                                  </div>
@@ -254,11 +254,11 @@
                                        <ul class="list">
                                           <li>
                                              <input tabindex="7" type="radio" id="minimal-radio-1" name="minimal-radio">
-                                             <label for="minimal-radio-1">New</label>
+                                             <label for="minimal-radio-1">Nouveau</label>
                                           </li>
                                           <li>
                                              <input tabindex="8" type="radio" id="minimal-radio-2" name="minimal-radio" checked>
-                                             <label for="minimal-radio-2">Used</label>
+                                             <label for="minimal-radio-2">Utilisé</label>
                                           </li>
                                        </ul>
                                     </div>
@@ -273,7 +273,7 @@
                                  <h4 class="panel-title">
                                     <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse7" aria-expanded="false" aria-controls="collapse7">
                                     <i class="more-less glyphicon glyphicon-plus"></i>
-                                    Body Type
+                                    Type
                                     </a>
                                  </h4>
                               </div>
@@ -315,16 +315,16 @@
                                  <h4 class="panel-title">
                                     <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapsefour" aria-expanded="false" aria-controls="collapsefour">
                                     <i class="more-less glyphicon glyphicon-plus"></i>
-                                    Price
+                                    Prix
                                     </a>
                                  </h4>
                               </div>
                               <!-- Content -->
                               <div id="collapsefour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingfour">
                                  <div class="panel-body">
-                                    <span class="price-slider-value">Price ($) <span id="price-min"></span> - <span id="price-max"></span></span>
+                                    <span class="price-slider-value">Prix (FCFA) <span id="price-min"></span> - <span id="price-max"></span></span>
                                     <div id="price-slider"></div>
-                                    <a class="btn btn-theme btn-sm margin-top-20">Search</a>
+                                    <a class="btn btn-theme btn-sm margin-top-20">Rechercher</a>
                                  </div>
                               </div>
                            </div>
@@ -336,7 +336,7 @@
                                  <h4 class="panel-title">
                                     <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse8" aria-expanded="false" aria-controls="collapse8">
                                     <i class="more-less glyphicon glyphicon-plus"></i>
-                                    Select Year
+                                    Selectionnez l'année
                                     </a>
                                  </h4>
                               </div>
@@ -383,7 +383,7 @@
                               <div class="panel-heading" >
                                  <h4 class="panel-title">
                                     <a>
-                                    Recent Ads
+                                    Ajouts récents
                                     </a>
                                  </h4>
                               </div>
@@ -395,7 +395,7 @@
                                        <div class="recent-ads-container">
                                           <div class="recent-ads-list-image">
                                              <a href="#" class="recent-ads-list-image-inner">
-                                             <img src="images/posting/thumb-1.jpg" alt="">
+                                             <img src="images/posting/voitures/thumb-1.jpg" alt="">
                                              </a><!-- /.recent-ads-list-image-inner -->
                                           </div>
                                           <!-- /.recent-ads-list-image -->
@@ -404,11 +404,11 @@
                                                 <a href="#">Audi Q5 2.0T quattro Premium </a>
                                              </h3>
                                              <ul class="recent-ads-list-location">
-                                                <li><a href="#">New York</a>,</li>
-                                                <li><a href="#">Brooklyn</a></li>
+                                                <li><a href="#">Douala</a>,</li>
+                                                <li><a href="#">Deido</a></li>
                                              </ul>
                                              <div class="recent-ads-list-price">
-                                                $ 17,000
+                                                 170,000FCFA
                                              </div>
                                              <!-- /.recent-ads-list-price -->
                                           </div>
@@ -421,7 +421,7 @@
                                        <div class="recent-ads-container">
                                           <div class="recent-ads-list-image">
                                              <a href="#" class="recent-ads-list-image-inner">
-                                             <img src="images/posting/thumb-2.jpg" alt="">
+                                             <img src="images/posting/voitures/thumb-2.jpg" alt="">
                                              </a><!-- /.recent-ads-list-image-inner -->
                                           </div>
                                           <!-- /.recent-ads-list-image -->
@@ -430,11 +430,11 @@
                                                 <a href="#">Honda Civic 2017 Sports Edition</a>
                                              </h3>
                                              <ul class="recent-ads-list-location">
-                                                <li><a href="#">New York</a>,</li>
-                                                <li><a href="#">Brooklyn</a></li>
+                                                <li><a href="#">Yaounde</a>,</li>
+                                                <li><a href="#">mvog Ada</a></li>
                                              </ul>
                                              <div class="recent-ads-list-price">
-                                                $ 66,000
+                                                 660,000FCFA
                                              </div>
                                              <!-- /.recent-ads-list-price -->
                                           </div>
@@ -447,7 +447,7 @@
                                        <div class="recent-ads-container">
                                           <div class="recent-ads-list-image">
                                              <a href="#" class="recent-ads-list-image-inner">
-                                             <img src="images/posting/thumb-3.jpg" alt="">
+                                             <img src="images/posting/voitures/thumb-3.jpg" alt="">
                                              </a><!-- /.recent-ads-list-image-inner -->
                                           </div>
                                           <!-- /.recent-ads-list-image -->
@@ -456,11 +456,11 @@
                                                 <a href="#">2014 Ford Shelby GT500 Coupe</a>
                                              </h3>
                                              <ul class="recent-ads-list-location">
-                                                <li><a href="#">New York</a>,</li>
-                                                <li><a href="#">Brooklyn</a></li>
+                                                <li><a href="#">Limbe</a>,</li>
+                                                <li><a href="#">Beach</a></li>
                                              </ul>
                                              <div class="recent-ads-list-price">
-                                                $ 37,000
+                                                370,000FCFA
                                              </div>
                                              <!-- /.recent-ads-list-price -->
                                           </div>
@@ -473,7 +473,7 @@
                                        <div class="recent-ads-container">
                                           <div class="recent-ads-list-image">
                                              <a href="#" class="recent-ads-list-image-inner">
-                                             <img src="images/posting/thumb-4.jpg" alt="">
+                                             <img src="images/posting/voitures/thumb-4.jpg" alt="">
                                              </a><!-- /.recent-ads-list-image-inner -->
                                           </div>
                                           <!-- /.recent-ads-list-image -->
@@ -482,11 +482,11 @@
                                                 <a href="#">Lamborghini Gallardo 5.0 V10 2dr</a>
                                              </h3>
                                              <ul class="recent-ads-list-location">
-                                                <li><a href="#">New York</a>,</li>
-                                                <li><a href="#">Brooklyn</a></li>
+                                                <li><a href="#">Dschang</a>,</li>
+                                                <li><a href="#">Tandon</a></li>
                                              </ul>
                                              <div class="recent-ads-list-price">
-                                                $ 11,000
+                                                110,000FCFA
                                              </div>
                                              <!-- /.recent-ads-list-price -->
                                           </div>
@@ -499,7 +499,7 @@
                                        <div class="recent-ads-container">
                                           <div class="recent-ads-list-image">
                                              <a href="#" class="recent-ads-list-image-inner">
-                                             <img src="images/posting/thumb-5.jpg" alt="">
+                                             <img src="images/posting/voitures/thumb-5.jpg" alt="">
                                              </a><!-- /.recent-ads-list-image-inner -->
                                           </div>
                                           <!-- /.recent-ads-list-image -->
@@ -508,11 +508,11 @@
                                                 <a href="#">Porsche 911 Carrera 2017 </a>
                                              </h3>
                                              <ul class="recent-ads-list-location">
-                                                <li><a href="#">New York</a>,</li>
-                                                <li><a href="#">Brooklyn</a></li>
+                                                <li><a href="#">Bangou</a>,</li>
+                                                <li><a href="#">Tchitchi</a></li>
                                              </ul>
                                              <div class="recent-ads-list-price">
-                                                $ 20,000
+                                                 200,000FCFA
                                              </div>
                                              <!-- /.recent-ads-list-price -->
                                           </div>

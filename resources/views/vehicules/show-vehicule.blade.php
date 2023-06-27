@@ -47,15 +47,15 @@ $dateDuJour = $date->toDateString();
                                 <div class="short-history">
                                     <ul>
                                         <li><b><?php echo $dateDuJour  ?></b></li>
-                                        <li>Category: <b><a href="#">{{$vehicule->categorie }} </a></b></li>
-                                        <li>Views: <b>666</b></li>
-                                        <li><a href="#">Edit</a></li>
+                                        <li>Categorie: <b><a href="#">{{$vehicule->categorie }} </a></b></li>
+                                        <li>Vues: <b>666</b></li>
+                                        <li><a href="#">Editer</a></li>
                                     </ul>
                                 </div>
                             </div>
                         </div>
                         <div class="col-md-3 col-sm-4 detail_price col-xs-12">
-                            <div class="singleprice-tag">{{$vehicule->prix }} FCFA<span>(Fixed)</span></div>
+                            <div class="singleprice-tag">{{$vehicule->prix }} FCFA<span>(Fixe)</span></div>
                         </div>
                    </div>
                    <div class="col-md-8 col-xs-12 col-sm-12">
@@ -78,7 +78,7 @@ $dateDuJour = $date->toDateString();
                            <!-- Heading Area -->
                            <div class="heading-panel">
                               <h3 class="main-title text-left">
-                                 Key Features
+                              Caractéristiques principales
                               </h3>
                            </div>
                            <div class="key-features">
@@ -120,19 +120,19 @@ $dateDuJour = $date->toDateString();
                                  </h3>
                               </div>
                               <p>
-                                 samsung galaxy note 2 new condition with handsfree and charger urgent sale. with book pouch original 4g lte. 16 gb condition 10/10 andriod kitkat4.4.2
+                                 Samsung galaxy note 2 état neuf avec kit mains libres et chargeur vente urgente. avec book pouch original 4g lte. 16 gb état 10/10 andriod kitkat4.4.2
                               </p>
                               <p>
-                                 Bank Leased 5 Year plan 2013 Honda Civic 1.8 Vti Oriel Prosmatec Automatic ( New Shape ) Attractive Silver Color 1 year installments paid Lahore Reg number Well Maintained Insurance + tracker etc included Options: Sunroof 
+                              Leasing bancaire 5 ans 2013 Honda Civic 1.8 Vti Oriel Prosmatec Automatic ( New Shape ) Attractive Silver Color 1 year installments paid Lahore Reg number Well Maintained Insurance + tracker etc included Options : Toit ouvrant
                               </p>
                               <p>
-                                 Chilled AC Power Windows Power Steering ABS braking system ETC 15000 km carefully driven No SMS / Email , Serious Buyers Requested To Call .
+                              Climatisation réfrigérée Vitres électriques Direction assistée Système de freinage ABS ETC 15000 km conduite avec soin Pas de SMS / Email , Les acheteurs sérieux sont priés d'appeler .
                               </p>
                               <p>
-                                 Chilled AC Power Windows Power Steering ABS braking system ETC 15000 km carefully driven No SMS / Email , Serious Buyers Requested To Call .
+                              Climatisation réfrigérée Vitres électriques Direction assistée Système de freinage ABS ETC 15000 km conduite avec soin Pas de SMS / Email , Les acheteurs sérieux sont priés d'appeler .
                               </p>
                               <p>
-                                 Bank Leased 5 Year plan 2013 Honda Civic 1.8 Vti Oriel Prosmatec Automatic ( New Shape ) Attractive Silver Color 1 year installments paid Lahore Reg number Well Maintained Insurance + tracker etc included Options: Sunroof 
+                              Leasing bancaire 5 ans 2013 Honda Civic 1.8 Vti Oriel Prosmatec Automatic ( New Shape ) Attractive Silver Color 1 year installments paid Lahore Reg number Well Maintained Insurance + tracker etc included Options : Toit ouvrant
                               </p>
                            </div>
                            <!-- Related Image  --> 
@@ -143,7 +143,7 @@ $dateDuJour = $date->toDateString();
                               <!-- Heading Area -->
                               <div class="heading-panel">
                                  <h3 class="main-title text-left">
-                                    Car Features
+                                 Caractéristiques de la voiture
                                     </h3>
                               </div>
                               <!-- Car Key Features  --> 
@@ -177,7 +177,7 @@ $dateDuJour = $date->toDateString();
                         <div class="category-list-icon">
                               <i class="fas fa-envelope" style="color: green;"></i>
                               <div class="category-list-title">
-                                 <h5><a href="/contact" >Contact Seller Via Email</a></h5>
+                                 <h5><a href="/contact" >Contacter le vendeur via Email</a></h5>
                               </div>
                            </div>
                             <div class="category-list-icon">
@@ -190,13 +190,13 @@ $dateDuJour = $date->toDateString();
                         <div class="white-bg user-contact-info">
                            <div class="user-info-card">
                               <div class="user-photo col-md-4 col-sm-3  col-xs-4">
-                                 <img src="{{ asset('images/users/3.jpg') }}" alt="">
+                                 <img src="{{ asset('images/users/1.jpg') }}" alt="">
                               </div>
                               <div class="user-information col-md-8 col-sm-9 col-xs-8">
-                                 <span class="user-name"><a class="hover-color" href="profile.html">Sonu Monu</a></span>
+                                 <span class="user-name"><a class="hover-color" href="profile.html">Maéva</a></span>
                                  <div class="item-date">
-                                    <span class="ad-pub">Published on: 10 Dec 2017</span><br>
-                                    <a href="#" class="link">More Ads</a>
+                                    <span class="ad-pub">Publié on: 10 Juin 2023</span><br>
+                                    <a href="#" class="link">Plus</a>
                                  </div>
                               </div>
                               <div class="clearfix"></div>
@@ -204,9 +204,9 @@ $dateDuJour = $date->toDateString();
                            <div class="ad-listing-meta">
                               <ul>
                                  <li>Ad Id: <span class="color">4143</span></li>
-                                 <li>Categories: <span class="color">Used Cars</span></li>
+                                 <li>Categories: <span class="color">{{$vehicule->etat}}</span></li>
                                  <li>Visits: <span class="color">9</span></li>
-                                 <li>Location: <span class="color">New York, USA</span></li>
+                                 <li>Location: <span class="color">Douala, Cameroun</span></li>
                               </ul>
                            </div>
                            <div id="itemMap"></div>
@@ -222,7 +222,7 @@ $dateDuJour = $date->toDateString();
                                  <div class="recent-ads-container">
                                     <div class="recent-ads-list-image">
                                        <a href="#" class="recent-ads-list-image-inner">
-                                       <img src="{{ asset('images/posting/thumb-1.jpg') }}" alt="">
+                                       <img src="{{ asset('images/posting/voitures/thumb-1.jpg') }}" alt="">
                                        </a><!-- /.recent-ads-list-image-inner -->
                                     </div>
                                     <!-- /.recent-ads-list-image -->
@@ -248,7 +248,7 @@ $dateDuJour = $date->toDateString();
                                  <div class="recent-ads-container">
                                     <div class="recent-ads-list-image">
                                        <a href="#" class="recent-ads-list-image-inner">
-                                       <img src="{{ asset('images/posting/thumb-2.jpg') }}" alt="">
+                                       <img src="{{ asset('images/posting/voitures/thumb-2.jpg') }}" alt="">
                                        </a><!-- /.recent-ads-list-image-inner -->
                                     </div>
                                     <!-- /.recent-ads-list-image -->
@@ -274,7 +274,7 @@ $dateDuJour = $date->toDateString();
                                  <div class="recent-ads-container">
                                     <div class="recent-ads-list-image">
                                        <a href="#" class="recent-ads-list-image-inner">
-                                       <img src="images/posting/thumb-3.jpg" alt="">
+                                       <img src="{{ asset('images/posting/voitures/thumb-3.jpg') }}" alt="">
                                        </a><!-- /.recent-ads-list-image-inner -->
                                     </div>
                                     <!-- /.recent-ads-list-image -->

@@ -3,6 +3,16 @@
 
 @section('contact')
 
+@if(session('success'))
+    <div class="alert alert-success" id="success-message">
+        {{ session('success')['message'] }}
+    </div>
+    <script>
+        setTimeout(function() {
+            document.getElementById("success-message").style.display = "none";
+        }, {{ session('success')['duration'] }});
+    </script>
+@endif
 <div class="page-header-area-2 gray">
          <div class="container">
             <div class="row">
@@ -24,6 +34,7 @@
       </div>
       <!-- =-=-=-=-=-=-= Breadcrumb End =-=-=-=-=-=-= --> 
       <!-- =-=-=-=-=-=-= Main Content Area =-=-=-=-=-=-= -->
+      
       <div class="main-content-area clearfix">
          <!-- =-=-=-=-=-=-= Latest Ads =-=-=-=-=-=-= -->
          <section class="section-padding gray no-top ">

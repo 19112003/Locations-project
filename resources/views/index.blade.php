@@ -89,9 +89,9 @@
                                           <a title="" href="/vehicules/show/{{$vehicule->id}}">{{$vehicule->modele }}  </a>
                                        </h3>
                                        <!-- Location -->
-                                       <p class="location"><i class="fa fa-map-marker"></i> Model Town Link Road London</p>
+                                       <p class="location"><i class="fa fa-map-marker"></i> Cameroun</p>
                                        <!-- Price -->
-                                       <span class="ad-price">{{$vehicule->prix }}</span> 
+                                       <span class="ad-price">{{$vehicule->prix }}FCFA</span> 
                                     </div>
                                     <!-- Ad Meta Stats -->
                                     <div class="ad-info-1">
@@ -131,8 +131,8 @@
                   <div class="col-lg-6 col-md-6 col-xs-12 col-sm-12">
                      <div >
                         <div class="short-info">
-                           <a href="#">Are you looking for a car?</a>
-                           <p>Search your car in our Inventory and request a quote on the vehicle of your choosing. </p>
+                           <a href="#">Recherchez vous un logement ?</a>
+                           <p>Faites votre recherche parmis notre sélection de logements de luxe. </p>
                         </div>
                         <div class="text-center">
                            <img class="img-responsive wow slideInLeft center-block " data-wow-delay="0ms" data-wow-duration="2000ms" src="images/appartement.jpg" alt="">
@@ -143,8 +143,8 @@
                   <div class="col-lg-6 col-md-6 col-xs-12 col-sm-12">
                      <div>
                         <div class="short-info">
-                           <a href="#">Do you want to sell your car?</a>
-                           <p>Request search your car in our Inventory and a quote on the vehicle of your choosing. </p>
+                           <a href="#">Envie de louer un nouveau véhicule ?</a>
+                           <p>Faites vos recherches parmis notre sélection de véhicules de luxe. </p>
                         </div>
                         <div class="text-center">
                            <img class="img-responsive wow slideInRight center-block" data-wow-delay="0ms" data-wow-duration="2000ms" src="images/voiture.png" alt="">
@@ -166,9 +166,9 @@
                   <div class="heading-panel">
                      <div class="col-xs-12 col-md-12 col-sm-12 text-center">
                         <!-- Main Title -->
-                        <h1>Latest <span class="heading-color"> Trending</span> Ads</h1>
+                        <h1>Dernières <span class="heading-color"> Nouveautés</span> </h1>
                         <!-- Short Description -->
-                        <p class="heading-text">Eu delicata rationibus usu. Vix te putant utroque, ludus fabellas duo eu, his dico ut debet consectetuer.</p>
+                        <p class="heading-text">Découvrez notre toute nouvelle sélection de logements et véhicules de luxe.</p>
                      </div>
                   </div>
                   <!-- Middle Content Box -->
@@ -208,12 +208,12 @@
                                  <div class="category-title"> <span><a href="#">Car & Bikes</a></span> </div>
                                  <!-- Ad Title -->
                                  <h3>
-                                    <a title="" href="single-page-listing.html">{{$vehicule->modele }}</a>
+                                    <a title="" href="/vehicules/show/{{$vehicule->id}}">{{$vehicule->modele }}</a>
                                  </h3>
                                  <!-- Location -->
-                                 <p class="location"><i class="fa fa-map-marker"></i> Model Town Link Road London</p>
+                                 <p class="location"><i class="fa fa-map-marker"></i> Cameroun</p>
                                  <!-- Price -->
-                                 <span class="ad-price">{{$vehicule->prix }}$</span> 
+                                 <span class="ad-price">{{$vehicule->prix }}FCFA</span> 
                               </div>
                               <!-- Ad Meta Stats -->
                               <div class="ad-info-1">
@@ -234,7 +234,7 @@
                         <div class="clearfix"></div>
                         <div class="text-center">
                            <div class="load-more-btn">
-                              <a class="btn btn-lg  btn-theme" href="listing-6.html"> View All <i class="fa fa-refresh"></i> </a>
+                              <a class="btn btn-lg  btn-theme" href="/vehicules"> Voir tout <i class="fa fa-refresh"></i> </a>
                            </div>
                         </div>
 
@@ -257,32 +257,26 @@
                         <div class="col-md-4 col-lg-4 col-sm-6 col-xs-12  ">
                            <div class="white category-grid-box-1 ">
                                     <div class="featured-ribbon">
-                                       <span>Featured</span>
+                                       <span>Nouveau</span>
                                     </div>
                                     <!-- Image Box -->
-                                    <div class="image"> <img alt="Carspot" src="images/posting/voitures/14.jpg" class="img-responsive">
+                                    <div class="image"> <img alt="Carspot" src="images/posting/logements/2.jpg" class="img-responsive">
                                     </div>
                                     <!-- Short Description -->
                                     <div class="short-description-1 ">
                                        <!-- Category Title -->
-                                       <div class="category-title"> <span><a href="#">Car & Bikes</a></span> </div>
+                                       <div class="category-title"> <span><a href="#">Meublés</a></span> </div>
                                        <!-- Ad Title -->
                                        <h3>
-                                          <a title="" href="single-page-listing.html">2017 Audi A4 quattro Premium</a>
+                                          <a title="" href="single-page-listing.html">Appartement Omnisport</a>
                                        </h3>
                                        <!-- Location -->
-                                       <p class="location"><i class="fa fa-map-marker"></i> Model Town Link Road London</p>
+                                       <p class="location"><i class="fa fa-map-marker"></i> Sangmelima</p>
                                        <!-- Price -->
-                                       <span class="ad-price">$210</span> 
+                                       <span class="ad-price">310000FCFA</span> 
                                     </div>
                                     <!-- Ad Meta Stats -->
-                                    <div class="ad-info-1">
-                                       <ul>
-                                          <li><i class="flaticon-fuel-1"></i>Diesel</li>
-                                          <li><i class="flaticon-dashboard"></i>35,000 km</li>
-                                          <li><i class="flaticon-engine-2"></i> 1800 cc</li>
-                                       </ul>
-                                    </div>
+                                    
                                  </div>
                         </div>
                         <!-- Listing Ad Grid -->
@@ -290,32 +284,26 @@
                         <div class="col-md-4 col-lg-4 col-sm-6 col-xs-12  ">
                            <div class="white category-grid-box-1 ">
                                     <div class="featured-ribbon">
-                                       <span>Featured</span>
+                                       <span>Nouveau</span>
                                     </div>
                                     <!-- Image Box -->
-                                    <div class="image"> <img alt="Carspot" src="images/posting/voitures/11.jpg" class="img-responsive">
+                                    <div class="image"> <img alt="Carspot" src="images/posting/logements/14.jpg" class="img-responsive">
                                     </div>
                                     <!-- Short Description -->
                                     <div class="short-description-1 ">
                                        <!-- Category Title -->
-                                       <div class="category-title"> <span><a href="#">Car & Bikes</a></span> </div>
+                                       <div class="category-title"> <span><a href="#">Meublés</a></span> </div>
                                        <!-- Ad Title -->
                                        <h3>
-                                          <a title="" href="single-page-listing.html">Porsche 911 Carrera 2017 </a>
+                                          <a title="" href="single-page-listing.html">Villa de la Verriere </a>
                                        </h3>
                                        <!-- Location -->
-                                       <p class="location"><i class="fa fa-map-marker"></i> Model Town Link Road London</p>
+                                       <p class="location"><i class="fa fa-map-marker"></i> Kribi</p>
                                        <!-- Price -->
-                                       <span class="ad-price">$120</span> 
+                                       <span class="ad-price">150000FCFA</span> 
                                     </div>
                                     <!-- Ad Meta Stats -->
-                                    <div class="ad-info-1">
-                                       <ul>
-                                          <li><i class="flaticon-fuel-1"></i>Diesel</li>
-                                          <li><i class="flaticon-dashboard"></i>35,000 km</li>
-                                          <li><i class="flaticon-engine-2"></i> 1800 cc</li>
-                                       </ul>
-                                    </div>
+                                    
                                  </div>
                         </div>
                         <!-- Listing Ad Grid -->
@@ -323,32 +311,26 @@
                         <div class="col-md-4 col-lg-4 col-sm-6 col-xs-12  ">
                            <div class="white category-grid-box-1 ">
                                     <div class="featured-ribbon">
-                                       <span>Featured</span>
+                                       <span>Nouveau</span>
                                     </div>
                                     <!-- Image Box -->
-                                    <div class="image"> <img alt="Carspot" src="images/posting/voitures/15.jpg" class="img-responsive">
+                                    <div class="image"> <img alt="Carspot" src="images/posting/logements/6.jpg" class="img-responsive">
                                     </div>
                                     <!-- Short Description -->
                                     <div class="short-description-1 ">
                                        <!-- Category Title -->
-                                       <div class="category-title"> <span><a href="#">Car & Bikes</a></span> </div>
+                                       <div class="category-title"> <span><a href="#">Meublés</a></span> </div>
                                        <!-- Ad Title -->
                                        <h3>
-                                          <a title="" href="single-page-listing.html">2014 Ford Shelby GT500 Coupe</a>
+                                          <a title="" href="single-page-listing.html">Appartement Tangidor</a>
                                        </h3>
                                        <!-- Location -->
-                                       <p class="location"><i class="fa fa-map-marker"></i> Model Town Link Road London</p>
+                                       <p class="location"><i class="fa fa-map-marker"></i> Bangou, Ndeumnieup</p>
                                        <!-- Price -->
-                                       <span class="ad-price">$420</span> 
+                                       <span class="ad-price">300000FCFA</span> 
                                     </div>
                                     <!-- Ad Meta Stats -->
-                                    <div class="ad-info-1">
-                                       <ul>
-                                          <li><i class="flaticon-fuel-1"></i>Diesel</li>
-                                          <li><i class="flaticon-dashboard"></i>35,000 km</li>
-                                          <li><i class="flaticon-engine-2"></i> 1800 cc</li>
-                                       </ul>
-                                    </div>
+                                    
                                  </div>
                         </div>
                         <!-- Listing Ad Grid -->
@@ -356,32 +338,26 @@
                         <div class="col-md-4 col-lg-4 col-sm-6 col-xs-12  ">
                            <div class="white category-grid-box-1 ">
                                     <div class="featured-ribbon">
-                                       <span>Featured</span>
+                                       <span>Nouveau</span>
                                     </div>
                                     <!-- Image Box -->
-                                    <div class="image"> <img alt="Carspot" src="images/posting/voitures/5.jpg" class="img-responsive">
+                                    <div class="image"> <img alt="Carspot" src="images/posting/logements/10.jpg" class="img-responsive">
                                     </div>
                                     <!-- Short Description -->
                                     <div class="short-description-1 ">
                                        <!-- Category Title -->
-                                       <div class="category-title"> <span><a href="#">Car & Bikes</a></span> </div>
+                                       <div class="category-title"> <span><a href="#">Meublés</a></span> </div>
                                        <!-- Ad Title -->
                                        <h3>
-                                          <a title="" href="single-page-listing.html">Honda Civic 2017 Sports Edition</a>
+                                          <a title="" href="single-page-listing.html">Maison bois de sciene</a>
                                        </h3>
                                        <!-- Location -->
-                                       <p class="location"><i class="fa fa-map-marker"></i> Model Town Link Road London</p>
+                                       <p class="location"><i class="fa fa-map-marker"></i> Yaounde, Bastos</p>
                                        <!-- Price -->
-                                       <span class="ad-price">$370</span> 
+                                       <span class="ad-price">450000FCFA</span> 
                                     </div>
                                     <!-- Ad Meta Stats -->
-                                    <div class="ad-info-1">
-                                       <ul>
-                                          <li><i class="flaticon-fuel-1"></i>Diesel</li>
-                                          <li><i class="flaticon-dashboard"></i>35,000 km</li>
-                                          <li><i class="flaticon-engine-2"></i> 1800 cc</li>
-                                       </ul>
-                                    </div>
+                                    
                                  </div>
                         </div>
                         <!-- Listing Ad Grid -->
@@ -389,32 +365,26 @@
                         <div class="col-md-4 col-lg-4 col-sm-6 col-xs-12  ">
                            <div class="white category-grid-box-1 ">
                                     <div class="featured-ribbon">
-                                       <span>Featured</span>
+                                       <span>Nouveau</span>
                                     </div>
                                     <!-- Image Box -->
-                                    <div class="image"> <img alt="Carspot" src="images/posting/voitures/6.jpg" class="img-responsive">
+                                    <div class="image"> <img alt="Carspot" src="images/posting/logements/6.jpg" class="img-responsive">
                                     </div>
                                     <!-- Short Description -->
                                     <div class="short-description-1 ">
                                        <!-- Category Title -->
-                                       <div class="category-title"> <span><a href="#">Car & Bikes</a></span> </div>
+                                       <div class="category-title"> <span><a href="#">Meublés</a></span> </div>
                                        <!-- Ad Title -->
                                        <h3>
-                                          <a title="" href="single-page-listing.html">McLaren F1 Sports Car</a>
+                                          <a title="" href="single-page-listing.html">Appartement Meublé Walker</a>
                                        </h3>
                                        <!-- Location -->
-                                       <p class="location"><i class="fa fa-map-marker"></i> Model Town Link Road London</p>
+                                       <p class="location"><i class="fa fa-map-marker"></i> Limbe</p>
                                        <!-- Price -->
-                                       <span class="ad-price">$990</span> 
+                                       <span class="ad-price">225000FCFA</span> 
                                     </div>
                                     <!-- Ad Meta Stats -->
-                                    <div class="ad-info-1">
-                                       <ul>
-                                          <li><i class="flaticon-fuel-1"></i>Diesel</li>
-                                          <li><i class="flaticon-dashboard"></i>35,000 km</li>
-                                          <li><i class="flaticon-engine-2"></i> 1800 cc</li>
-                                       </ul>
-                                    </div>
+                                    
                                  </div>
                         </div>
                         <!-- Listing Ad Grid -->
@@ -422,39 +392,33 @@
                         <div class="col-md-4 col-lg-4 col-sm-6 col-xs-12  ">
                            <div class="white category-grid-box-1 ">
                                     <div class="featured-ribbon">
-                                       <span>Featured</span>
+                                       <span>Nouveau</span>
                                     </div>
                                     <!-- Image Box -->
-                                    <div class="image"> <img alt="Carspot" src="images/posting/voitures/7.jpg" class="img-responsive">
+                                    <div class="image"> <img alt="Carspot" src="images/posting/logements/9.jpg" class="img-responsive">
                                     </div>
                                     <!-- Short Description -->
                                     <div class="short-description-1 ">
                                        <!-- Category Title -->
-                                       <div class="category-title"> <span><a href="#">Car & Bikes</a></span> </div>
+                                       <div class="category-title"> <span><a href="#">Meublés</a></span> </div>
                                        <!-- Ad Title -->
                                        <h3>
-                                          <a title="" href="single-page-listing.html">2015 Lamborghini Huracan</a>
+                                          <a title="" href="single-page-listing.html">Appartement Sonel</a>
                                        </h3>
                                        <!-- Location -->
-                                       <p class="location"><i class="fa fa-map-marker"></i> Model Town Link Road London</p>
+                                       <p class="location"><i class="fa fa-map-marker"></i> Bafoussam, Ekouko</p>
                                        <!-- Price -->
-                                       <span class="ad-price">$450</span> 
+                                       <span class="ad-price">350000FCFA</span> 
                                     </div>
                                     <!-- Ad Meta Stats -->
-                                    <div class="ad-info-1">
-                                       <ul>
-                                          <li><i class="flaticon-fuel-1"></i>Diesel</li>
-                                          <li><i class="flaticon-dashboard"></i>35,000 km</li>
-                                          <li><i class="flaticon-engine-2"></i> 1800 cc</li>
-                                       </ul>
-                                    </div>
+                                    
                                  </div>
                         </div>
                         <!-- Listing Ad Grid -->
                         <div class="clearfix"></div>
                         <div class="text-center">
                            <div class="load-more-btn">
-                              <button class="btn btn-lg btn-theme"> View All <i class="fa fa-refresh"></i> </button>
+                              <button class="btn btn-lg btn-theme"> Voir Tout <i class="fa fa-refresh"></i> </button>
                            </div>
                         </div>
                         <!-- Middle Content Box End -->
@@ -473,8 +437,8 @@
                <div class="row">
                   <div class="col-md-4 col-sm-12 col-xs-12">
                      <div class="margin-top-30">
-                        <h3>Why Choose Us</h3>
-                        <h2>Our premium Clients</h2>
+                        <h3>Pourquoi nous choisir</h3>
+                        <h2>Nos clients premium</h2>
                      </div>
                   </div>
                   <div class="col-md-8 col-sm-12 col-xs-12">

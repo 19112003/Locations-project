@@ -34,7 +34,10 @@ class ContactController extends Controller
 
         Mail::to('ange.kouomo@2026.ucac-icam.com')->send(new ContactForm($emailData));
 
-        return redirect('/contact')->with('success', 'Votre message a été envoyé avec succès !');
+        return redirect('/contact')->with('success', [
+            'message' => 'Votre message a été envoyé avec succès !',
+            'duration' => 5000 // durée en millisecondes
+        ]);
    }
 
 }

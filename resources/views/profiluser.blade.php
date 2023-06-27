@@ -3,6 +3,13 @@
 
 @section('profiluser')
 
+<?php 
+
+$statutAdmin = auth()->user()->statutAdmin;
+$user = auth()->user();
+
+?>
+
 <div class="page-header-area-2 gray">
          <div class="container">
             <div class="row">
@@ -34,7 +41,7 @@
                   <!-- Middle Content Area -->
                   <div class="col-md-12 col-xs-12 col-sm-12">
                      <section class="search-result-item">
-                        <a class="image-link" href="#"><img class="image center-block" alt="" src="images/users/9.jpg"> </a>
+                        <a class="image-link" href="#"><img class="image center-block" alt="" src="images/users/1.jpg"> </a>
                         <div class="search-result-item-body">
                            <div class="row">
                               <div class="col-md-5 col-sm-12 col-xs-12">
@@ -51,8 +58,10 @@
                                     @endif</p>
                                  <span class="label label-warning">Paid Package</span>
                                  <span class="label label-success">Dealer</span>
+                                 @if ($statutAdmin == 1)
                                  <a href="/createLodging"><span class="label label-warning">+ Logement</span></a>
                                  <a href="/createVehicule"><span class="label label-success">+ Véhicule</span></a>
+                                 
                               </div>
                               <div class="col-md-7 col-sm-12 col-xs-12">
                                  <div class="row ad-history">
@@ -76,10 +85,12 @@
                                     </div>
                                  </div>
                               </div>
+                              @endif
                            </div>
                         </div>
                      </section>
                      <div class="dashboard-menu-container">
+                     @if ($statutAdmin == 1)
                         <ul>
                            <li class="active">
                               <a href="/user">
@@ -140,6 +151,47 @@
                             </ul>
                         </div>
                   </div>
+                     @else
+                     <ul>
+                           <li class="active">
+                              <a href="/user">
+                                 <div class="menu-name"> Profile </div>
+                              </a>
+                           </li>
+                           
+                           <li>
+                              <a href="#">
+                                 <div class="menu-name">Locations</div>
+                              </a>
+                           </li>
+                           <li>
+                              <a href="#">
+                                 <div class="menu-name">Réservations</div>
+                              </a>
+                           </li>
+                        
+                     
+                                <li>
+                                    <a href="#">
+                                        <div class="menu-name">Paiements</div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <form method="POST" action="{{ route('logout') }}">
+                                       @csrf
+                                       <button type="submit" class="btn-logout"><strong>Déconnexion</strong></button>
+                                    </form>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <div class="menu-name"> </div>
+                                    </a>
+                                </li>
+                            </ul>
+                            </div>
+                  </div>
+                     @endif
+                        
                   <!-- Middle Content Area  End -->
                </div>
                <!-- Row End -->
@@ -152,37 +204,40 @@
                            <ul class="nav nav-justified nav-tabs">
                               <li class="active"><a href="#profile" data-toggle="tab">Profil</a></li>
                               <li><a href="#edit" data-toggle="tab">Editer Profil</a></li>
-                              <li><a href="#payment" data-toggle="tab">Plan Setting</a></li>
-                              <li><a href="#settings" data-toggle="tab">Notification Settings</a></li>
+                              
                            </ul>
                            <div class="tab-content">
                               <div class="profile-edit tab-pane fade in active" id="profile">
-                                 <h2 class="heading-md">Manage your Name, ID and Email Addresses.</h2>
-                                 <p>Below are the name and email addresses on file for your account.</p>
+                                 <h2 class="heading-md">Gérez votre nom, votre identifiant et vos adresses électroniques.</h2>
+                                 <p>Vous trouverez ci-dessous le nom et l'adresse électronique de votre compte.</p>
                                  <dl class="dl-horizontal">
-                                    <dt><strong>Your name </strong></dt>
+                                    <dt><strong>Votre nom </strong></dt>
                                     <dd>
-                                       John Doe
+                                       {{ $user->name }}
                                     </dd>
-                                    <dt><strong>Email Address </strong></dt>
+                                    <dt><strong>Adresse Email </strong></dt>
                                     <dd>
-                                       contact@scriptsbundle.com
+                                       {{ $user->email }}
                                     </dd>
-                                    <dt><strong>Phone Number </strong></dt>
+                                    <dt><strong>Numero de téléphone </strong></dt>
                                     <dd>
-                                       (0423) 12-2345-789
+                                       +237 6 93 49 05 53
                                     </dd>
-                                    <dt><strong>Country </strong></dt>
+                                    <dt><strong>Pays </strong></dt>
                                     <dd>
-                                       England
+                                       Cameroun
                                     </dd>
                                     <dt><strong>City </strong></dt>
                                     <dd>
-                                       London
+                                       Douala
                                     </dd>
-                                    <dt><strong>You are a </strong></dt>
+                                    <dt><strong>Vous êtes </strong></dt>
                                     <dd>
-                                       Dealer
+                                    @if ($statutAdmin == 1)
+                                       Administrateur
+                                    @else
+                                       Client
+                                    @endif
                                     </dd>
                                     <dt><strong>Address </strong></dt>
                                     <dd>
@@ -191,38 +246,38 @@
                                  </dl>
                               </div>
                               <div class="profile-edit tab-pane fade" id="edit">
-                                 <h2 class="heading-md">Manage your Security Settings</h2>
-                                 <p>Manage Your Account</p>
+                                 <h2 class="heading-md">Gérer vos paramètres de sécurité</h2>
+                                 <p>Gérer votre compte</p>
                                  <div class="clearfix"></div>
                                  <form>
                                     <div class="row">
                                        <div class="col-md-6 col-sm-6 col-xs-12">
-                                          <label>Your Name </label>
+                                          <label>Votre nom </label>
                                           <input type="text" class="form-control margin-bottom-20">
                                        </div>
                                        <div class="col-md-6 col-sm-6 col-xs-12">
-                                          <label>Email Address <span class="color-red">*</span></label>
+                                          <label>Adresse Email <span class="color-red">*</span></label>
                                           <input type="text" class="form-control margin-bottom-20">
                                        </div>
                                        <div class="col-md-12 col-sm-12 col-xs-12">  
-                                          <label>Contact Number <span class="color-red">*</span></label>
+                                          <label>Numéro de téléphone <span class="color-red">*</span></label>
                                           <input type="text" class="form-control margin-bottom-20">
                                        </div>
                                        <div class="col-md-6 col-sm-12 col-xs-12 margin-bottom-20">
-                                          <label>Country <span class="color-red">*</span></label>
+                                          <label>Pays <span class="color-red">*</span></label>
                                           <select class="form-control">
-                                             <option value="0">SriLanka</option>
-                                             <option value="1">Australia</option>
-                                             <option value="2">Bahrain</option>
-                                             <option value="3">Canada</option>
-                                             <option value="4">Denmark</option>
-                                             <option value="5">Germany</option>
+                                             <option value="0">Cameroun</option>
+                                             <option value="1">Gabon</option>
+                                             <option value="2">Cote d'Ivoire</option>
+                                             <option value="3">Guinée</option>
+                                             <option value="4">Congo</option>
+                                             <option value="5">Tchad</option>
                                           </select>
                                        </div>
                                        <div class="col-md-6 col-sm-12 col-xs-12 margin-bottom-20">
-                                          <label>City <span class="color-red">*</span></label>
+                                          <label>Ville <span class="color-red">*</span></label>
                                           <select class="form-control">
-                                             <option value="0">London</option>
+                                             <option value="0">Douala</option>
                                              <option value="1">Edinburgh</option>
                                              <option value="2">Wales</option>
                                              <option value="3">Cardiff</option>
@@ -247,9 +302,7 @@
                                                 <input type="text" class="form-control" readonly>
                                              </div>
                                           </div>
-                                          <div class="col-md-3">
-                                             <img id="img-upload" class="img-responsive" src="images/users/2.jpg" alt="" />
-                                          </div>
+                                          
                                        </div>
                                     </div>
                                     <div class="clearfix"></div>
@@ -267,7 +320,7 @@
                                           </div>
                                        </div>
                                        <div class="col-md-4 col-sm-4 col-xs-12 text-right">
-                                          <button type="submit" class="btn btn-theme btn-sm">Update My Info</button>
+                                          <button type="submit" class="btn btn-theme btn-sm">Update mes infos</button>
                                        </div>
                                     </div>
                                  </form>

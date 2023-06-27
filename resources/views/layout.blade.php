@@ -1,3 +1,10 @@
+<?php 
+
+$statutAdmin = auth()->user()->statutAdmin;
+$user = auth()->user();
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
    
@@ -102,13 +109,15 @@
                            <li class="hidden-xs hidden-sm"><a href="{{ route('register') }}"><i class="fa fa-unlock" aria-hidden="true"></i> Inscription</a></li>
                            @auth
                            <li class="dropdown">
-                              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><img class="img-circle resize" alt="" src="{{ asset('images/users/3.jpg') }}"> <span class="myname hidden-xs"> {{ Auth::user()->name }} </span> <span class="caret"></span></a>
+                              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><img class="img-circle resize" alt="" src="{{ asset('images/users/1.jpg') }}"> <span class="myname hidden-xs"> {{ Auth::user()->name }} </span> <span class="caret"></span></a>
                               <ul class="dropdown-menu">
                                  <li><a href="/user">Profil utilisateur</a></li>
+                                 @if ($statutAdmin == 1)
                                  <li><a href="/Parkings">Parkings</a></li>
                                  <li><a href="/vehicules">Véhicules</a></li>
                                  <li><a href="#">Immeubles</a></li>
                                  <li><a href="/Lodgings">Logements</a></li>
+                                 @endif
                                  <li><a href="#">Locations</a></li>
                                  <li><a href="#">Réservations</a></li>
                                  <li>
@@ -121,7 +130,7 @@
                               </ul>
                            </li>
                            
-                          
+                           @if ($statutAdmin == 1)
                            <li class="dropdown">
                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="myname hidden-xs"> Enregistrement </span> <span class="caret"></span></a>
                               <ul class="dropdown-menu">
@@ -129,6 +138,7 @@
                                  <li><a href="/createVehicule">Véhicule</a></li>
                               </ul>
                            </li>
+                           @endif
                            @endauth
                            </li>
                         </ul>
